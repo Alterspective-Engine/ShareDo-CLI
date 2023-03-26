@@ -8,7 +8,6 @@ import path from 'path';
 import { Command } from '@commander-js/extra-typings';
 
 
-
 clear();
 console.log(
   chalk.green(
@@ -25,7 +24,8 @@ const program = new Command()
   .name('sharedo')
   .version('0.0.3')
   .description("ShareDo CLI")
-  .command('init', 'initialise a new project');
+  .command('dev', 'Commands to develop on the ShareDo.')
+  
 
 
 // .option('-l, --log <type>', 'specify logging type [verboase,Error,Info]');
@@ -33,16 +33,13 @@ const program = new Command()
 // .command('publish', 'publish a folder')
 // .command('download', 'download a item')
 try {
-  // console.log("program", program);
   program.parse(process.argv);
 }
 catch (e) {
   console.log("e", e);
 }
 
-
 if (!process.argv.slice(2).length) {
   program.outputHelp();
 }
 
-console.log("---end sharedo---");

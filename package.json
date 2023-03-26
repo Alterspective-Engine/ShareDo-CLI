@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "CLI for managing sharedo extensibility framework",
   "main": "./lib/sharedo.js",
-  "type": "module",
   "bin": {
     "sharedo": "./lib/sharedo.js",
     "@sharedo/sharedo": "./lib/sharedo.js"
@@ -19,24 +18,33 @@
     "npm:upgrade": "npx npm-check-updates -iu",
     "refresh": "rm -rf ./node_modules ./package-lock.json && npm install",
     "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/sharedo.ts",
-    "test": "sudo npm i -g && sharedo"
+    "test": "sudo npm i -g && sharedo",
+    "testDev":"node -r ts-node/register src/sharedo.ts"
   },
   "dependencies": {
     "@commander-js/extra-typings": "^10.0.3",
     "arg": "^5.0.2",
-    "chalk": "^4.1.0",
+    "axios": "^1.3.4",
+    "chalk": "^4.1.2",
     "clear": "^0.1.0",
     "commander": "^10.0.0",
     "esm": "^3.2.25",
     "figlet": "^1.5.0",
-    "inquirer": "^9.1.5",
-    "path": "^0.12.7"
+    "inquirer": "^8.2.5",
+    "lowdash": "^1.2.0",
+    "ncp": "^2.0.0",
+    "path": "^0.12.7",
+    "uuid": "^9.0.0",
+    "vscode": "^1.1.37"
   },
   "devDependencies": {
     "@types/clear": "^0.1.2",
     "@types/figlet": "^1.5.5",
     "@types/inquirer": "^9.0.3",
+    "@types/lodash": "^4.14.191",
+    "@types/ncp": "^2.0.5",
     "@types/node": "^14.14.33",
+    "@types/uuid": "^9.0.1",
     "depcheck": "^1.4.0",
     "lerna": "^4.0.0",
     "nodemon": "^2.0.7",
