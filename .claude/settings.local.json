@@ -67,7 +67,8 @@
       "Read(C:\\Users\\IgorJericevich\\Documents\\GitHub\\ShareDo-Platform\\sharedo-platform-adapter/**)",
       "Read(C:\\Users\\IgorJericevich\\Documents\\GitHub\\ShareDo-Platform\\sharedo-platform-adapter/**)",
       "Read(C:\\Users\\IgorJericevich\\Documents\\GitHub\\ShareDo-Platform\\sharedo-vscode/**)",
-      "Read(C:\\Users\\IgorJericevich\\Documents\\GitHub\\ShareDo-Platform\\sharedo-vscode/**)"
+      "Read(C:\\Users\\IgorJericevich\\Documents\\GitHub\\ShareDo-Platform\\sharedo-vscode/**)",
+      "Bash(chmod:*)"
     ],
     "deny": [],
     "ask": []

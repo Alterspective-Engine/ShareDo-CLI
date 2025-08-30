@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Pre-push hook that reminds to use Claude Code for build validation
+
+echo "🤖 Claude Code Build Reminder"
+echo "=============================="
+echo ""
+echo "Before pushing, have you:"
+echo ""
+echo "1. ✓ Asked Claude to check the build?"
+echo "   In VS Code: Ctrl+Shift+L → 'Check my build'"
+echo ""
+echo "2. ✓ Asked Claude to run tests?"
+echo "   In VS Code: Ctrl+Shift+L → 'Run all tests'"
+echo ""
+echo "3. ✓ Asked Claude to fix TypeScript errors?"
+echo "   In VS Code: Ctrl+Shift+L → 'Fix TypeScript errors'"
+echo ""
+
+read -p "Have you completed Claude Code validation? (y/n) " -n 1 -r
+echo
+if [[ ! $REPLY =~ ^[Yy]$ ]]
+then
+    echo "❌ Push cancelled. Please use Claude Code to validate first."
+    echo ""
+    echo "Quick command:"
+    echo "  1. Open VS Code"
+    echo "  2. Press Ctrl+Shift+L"
+    echo "  3. Type: 'Validate my changes for pushing'"
+    exit 1
+fi
+
+echo "✅ Proceeding with push..."
