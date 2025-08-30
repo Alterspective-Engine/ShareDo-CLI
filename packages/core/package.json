@@ -5,8 +5,8 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc -b",
-    "clean": "rimraf dist .tsbuildinfo",
+    "build": "tsc --build",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo",
     "test": "jest",
     "lint": "eslint src --ext .ts"
   },
@@ -15,7 +15,8 @@
     "jsonwebtoken": "^9.0.2"
   },
   "devDependencies": {
-    "@types/jsonwebtoken": "^9.0.5"
+    "@types/jsonwebtoken": "^9.0.5",
+    "rimraf": "^5.0.5"
   },
   "publishConfig": {
     "access": "public"
