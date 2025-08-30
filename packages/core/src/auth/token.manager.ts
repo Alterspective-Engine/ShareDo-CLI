@@ -6,6 +6,24 @@ import { ITokenManager } from './interfaces';
 
 export class TokenManager implements ITokenManager {
     private tokens: Map<string, { token: string; expiresAt?: number }> = new Map();
+    private cleanupInterval?: ReturnType<typeof setInterval>;
+
+    constructor() {
+        // Cleanup expired tokens every 5 minutes
+        this.cleanupInterval = setInterval(() => this.cleanupExpired(), 300000);
+    }
+
+    /**
+     * Cleanup expired tokens to prevent memory leak
+     */
+    private cleanupExpired(): void {
+        const now = Date.now();
+        for (const [key, stored] of this.tokens.entries()) {
+            if (stored.expiresAt && stored.expiresAt < now) {
+                this.tokens.delete(key);
+            }
+        }
+    }
 
     /**
      * Get stored token
@@ -74,6 +92,17 @@ export class TokenManager implements ITokenManager {
      * Clear all tokens
      */
     clear(): void {
+        this.tokens.clear();
+    }
+
+    /**
+     * Destroy the token manager and cleanup resources
+     */
+    destroy(): void {
+        if (this.cleanupInterval) {
+            clearInterval(this.cleanupInterval);
+            this.cleanupInterval = undefined;
+        }
         this.tokens.clear();
     }
 }

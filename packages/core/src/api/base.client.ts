@@ -179,62 +179,94 @@ export abstract class BaseApiClient {
 
   // Public API methods
   async get<T>(endpoint: string, options?: IRequestOptions): Promise<T> {
-    const response = await this.axiosInstance.get<T>(endpoint, {
-      headers: {
-        ...options?.headers,
-        skipAuth: options?.skipAuth ? 'true' : undefined
-      } as any,
-      params: options?.params,
-      timeout: options?.timeout
-    });
-    return response.data;
+    const requestKey = `GET:${endpoint}`;
+    try {
+      const response = await this.axiosInstance.get<T>(endpoint, {
+        headers: {
+          ...options?.headers,
+          skipAuth: options?.skipAuth ? 'true' : undefined
+        } as any,
+        params: options?.params,
+        timeout: options?.timeout
+      });
+      // Clear retry count on success to prevent memory leak
+      this.retryCount.delete(requestKey);
+      return response.data;
+    } catch (error) {
+      // Retry count cleared in interceptor on final failure
+      throw error;
+    }
   }
 
   async post<T>(endpoint: string, data?: any, options?: IRequestOptions): Promise<T> {
-    const response = await this.axiosInstance.post<T>(endpoint, data, {
-      headers: {
-        ...options?.headers,
-        skipAuth: options?.skipAuth ? 'true' : undefined
-      } as any,
-      params: options?.params,
-      timeout: options?.timeout
-    });
-    return response.data;
+    const requestKey = `POST:${endpoint}`;
+    try {
+      const response = await this.axiosInstance.post<T>(endpoint, data, {
+        headers: {
+          ...options?.headers,
+          skipAuth: options?.skipAuth ? 'true' : undefined
+        } as any,
+        params: options?.params,
+        timeout: options?.timeout
+      });
+      this.retryCount.delete(requestKey);
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
   }
 
   async put<T>(endpoint: string, data?: any, options?: IRequestOptions): Promise<T> {
-    const response = await this.axiosInstance.put<T>(endpoint, data, {
-      headers: {
-        ...options?.headers,
-        skipAuth: options?.skipAuth ? 'true' : undefined
-      } as any,
-      params: options?.params,
-      timeout: options?.timeout
-    });
-    return response.data;
+    const requestKey = `PUT:${endpoint}`;
+    try {
+      const response = await this.axiosInstance.put<T>(endpoint, data, {
+        headers: {
+          ...options?.headers,
+          skipAuth: options?.skipAuth ? 'true' : undefined
+        } as any,
+        params: options?.params,
+        timeout: options?.timeout
+      });
+      this.retryCount.delete(requestKey);
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
   }
 
   async delete<T>(endpoint: string, options?: IRequestOptions): Promise<T> {
-    const response = await this.axiosInstance.delete<T>(endpoint, {
-      headers: {
-        ...options?.headers,
-        skipAuth: options?.skipAuth ? 'true' : undefined
-      } as any,
-      params: options?.params,
-      timeout: options?.timeout
-    });
-    return response.data;
+    const requestKey = `DELETE:${endpoint}`;
+    try {
+      const response = await this.axiosInstance.delete<T>(endpoint, {
+        headers: {
+          ...options?.headers,
+          skipAuth: options?.skipAuth ? 'true' : undefined
+        } as any,
+        params: options?.params,
+        timeout: options?.timeout
+      });
+      this.retryCount.delete(requestKey);
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
   }
 
   async patch<T>(endpoint: string, data?: any, options?: IRequestOptions): Promise<T> {
-    const response = await this.axiosInstance.patch<T>(endpoint, data, {
-      headers: {
-        ...options?.headers,
-        skipAuth: options?.skipAuth ? 'true' : undefined
-      } as any,
-      params: options?.params,
-      timeout: options?.timeout
-    });
-    return response.data;
+    const requestKey = `PATCH:${endpoint}`;
+    try {
+      const response = await this.axiosInstance.patch<T>(endpoint, data, {
+        headers: {
+          ...options?.headers,
+          skipAuth: options?.skipAuth ? 'true' : undefined
+        } as any,
+        params: options?.params,
+        timeout: options?.timeout
+      });
+      this.retryCount.delete(requestKey);
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
   }
 }
