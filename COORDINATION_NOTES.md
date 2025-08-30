@@ -3,6 +3,19 @@
 **Date**: 2025-08-30
 **Architect**: Platform Architect AI
 
+## 🚨 URGENT: All AIs Must Sync
+
+**EVERY AI must run this NOW:**
+```bash
+git stash  # Save any work
+git checkout main
+git pull origin main
+npm install
+npm run build
+```
+
+**Then read:** `ALL_AI_INSTRUCTIONS.md`
+
 ## 🎯 Current Sprint Status
 
 ### Week 1 Progress Update
