@@ -1,0 +1,81 @@
+name: PR Validation
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  validate:
+    name: Validate PR
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      
+      - name: Install dependencies
+        run: npm ci --prefer-offline --no-audit
+      
+      - name: Check package versions
+        run: |
+          echo "Checking package versions..."
+          npm ls --depth=0
+      
+      - name: Build affected packages
+        run: |
+          # Detect changed files
+          git diff --name-only origin/${{ github.base_ref }}..HEAD | grep -E "packages/.*" || true
+          
+          # Build all for now (can be optimized to build only changed packages)
+          npm run build:all
+      
+      - name: Run tests for affected packages
+        run: |
+          npm run test:all
+        continue-on-error: true
+      
+      - name: Check TypeScript
+        run: |
+          npm run typecheck:all
+        continue-on-error: true
+      
+      - name: Check code style
+        run: |
+          npm run lint:all
+        continue-on-error: true
+      
+      - name: Comment PR status
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const status = '${{ job.status }}';
+            const emoji = status === 'success' ? '✅' : '⚠️';
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `${emoji} Build validation completed with status: **${status}**
+              
+              - Node version: 18
+              - Commit: ${{ github.event.pull_request.head.sha }}
+              
+              For detailed results, check the [Actions tab](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})`
+            })

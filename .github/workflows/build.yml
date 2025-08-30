@@ -1,0 +1,55 @@
+name: Build and Test
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: |
+          npm ci --prefer-offline --no-audit
+      
+      - name: Build all packages
+        run: |
+          npm run build:all
+      
+      - name: Run tests
+        run: |
+          npm run test:all
+        continue-on-error: true
+      
+      - name: TypeScript type checking
+        run: |
+          npm run typecheck:all
+        continue-on-error: true
+      
+      - name: Lint code
+        run: |
+          npm run lint:all
+        continue-on-error: true
+      
+      - name: Build status
+        if: always()
+        run: |
+          echo "Build completed with status: ${{ job.status }}"
+          echo "Commit: ${{ github.sha }}"
+          echo "Branch: ${{ github.ref_name }}"

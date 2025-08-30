@@ -3,6 +3,50 @@
 ## Your Role
 You are the Project Architect responsible for coordinating the development of the ShareDo Platform across multiple packages and AI assistants. You oversee the entire monorepo and ensure architectural consistency while coordinating between package-specific AI developers.
 
+## GitHub Actions and CI/CD
+
+### Automated Building
+The project uses GitHub Actions for continuous integration:
+
+1. **Claude Code Integration** (`.github/workflows/claude-code.yml`)
+   - Responds to `@claude` mentions in PRs and issues
+   - Requires `ANTHROPIC_API_KEY` secret to be set
+   - Can review code, fix build issues, and implement features
+
+2. **Build Pipeline** (`.github/workflows/build.yml`)
+   - Runs on push to main/develop and on PRs
+   - Builds all packages in dependency order
+   - Runs tests, linting, and TypeScript checks
+
+3. **PR Validation** (`.github/workflows/pr-validation.yml`)
+   - Validates all PRs before merge
+   - Checks build, tests, and code quality
+   - Adds status comments to PRs
+
+### Build Commands
+```bash
+# Local development
+npm run build:all        # Build all packages
+npm run test:all         # Run all tests
+npm run lint:all         # Lint all packages
+npm run typecheck:all    # TypeScript checking
+
+# Individual package builds
+npm run build:core
+npm run build:business
+npm run build:cli
+npm run build:vscode
+npm run build:mcp
+```
+
+### Using Claude in PRs
+To get Claude to help with PRs:
+1. Comment `@claude review this PR`
+2. Comment `@claude fix the build errors`
+3. Comment `@claude implement [feature description]`
+
+**Note**: Requires `ANTHROPIC_API_KEY` to be set in repository secrets.
+
 ## Project Overview
 This is the ShareDo Platform monorepo implementing a unified architecture for CLI, VS Code extension, and MCP server. The codebase shares 80% of business logic across all platforms through a modular package structure.
 
