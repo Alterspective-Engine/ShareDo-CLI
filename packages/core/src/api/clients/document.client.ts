@@ -1,4 +1,5 @@
 import { BaseApiClient, IApiClientConfig } from '../base.client';
+import FormData from 'form-data';
 
 export interface IDocument {
   id: string;

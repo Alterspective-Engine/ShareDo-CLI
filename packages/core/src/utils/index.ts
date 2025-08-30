@@ -2,6 +2,7 @@
  * Common utility functions for ShareDo platform
  */
 
+// Export existing utilities
 export function delay(ms: number): Promise<void> {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -50,3 +51,7 @@ export function retry<T>(
     }
   });
 }
+
+// Export new utilities
+export * from './logger';
+export * from './validator';
