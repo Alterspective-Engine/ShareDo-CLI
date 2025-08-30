@@ -1,0 +1,3 @@
+Package: vscode
+Branch: feature/vscode-extension
+Focus: packages/vscode
