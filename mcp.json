@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "sharedo": {
+      "command": "node",
+      "args": ["lib/mcp/server.js"],
+      "env": {
+        "SHAREDO_API_URL": "https://api.sharedo.com"
+      }
+    }
+  }
+}

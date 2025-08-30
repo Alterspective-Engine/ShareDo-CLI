@@ -19,10 +19,13 @@
     "refresh": "rm -rf ./node_modules ./package-lock.json && npm install",
     "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/sharedo.ts",
     "test": "sudo npm i -g && sharedo",
-    "testDev":"node -r ts-node/register src/sharedo.ts"
+    "testDev":"node -r ts-node/register src/sharedo.ts",
+    "mcp:start": "node lib/mcp/server.js",
+    "mcp:dev": "ts-node src/mcp/server.ts"
   },
   "dependencies": {
     "@commander-js/extra-typings": "^10.0.3",
+    "@modelcontextprotocol/sdk": "^1.0.0",
     "arg": "^5.0.2",
     "axios": "^1.3.4",
     "chalk": "^4.1.2",
