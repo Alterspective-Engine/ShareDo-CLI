@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npm link:*)",
+      "Bash(git stash:*)",
+      "Bash(git checkout:*)",
+      "Bash(git pull:*)",
+      "Bash(npm install)",
+      "Read(C:\\Users\\IgorJericevich\\Documents\\GitHub\\ShareDo-Platform\\sharedo-core\\src/**)",
+      "Read(C:\\Users\\IgorJericevich\\Documents\\GitHub\\ShareDo-Platform\\sharedo-core/**)",
+      "Read(C:\\Users\\IgorJericevich\\Documents\\GitHub\\ShareDo-Platform\\sharedo-core/**)",
+      "Read(C:\\Users\\IgorJericevich\\Documents\\GitHub\\ShareDo-Platform\\sharedo-core/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
