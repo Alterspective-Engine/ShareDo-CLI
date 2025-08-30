@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(npm run build:*)",
+      "Bash(node:*)",
+      "Bash(dir:*)",
+      "Bash(npm run lint)",
+      "Bash(npx eslint:*)",
+      "Bash(git checkout:*)",
+      "Bash(git fetch:*)",
+      "Bash(git merge:*)",
+      "Bash(git stash push:*)",
+      "Bash(npm run typecheck:*)",
+      "Bash(for pkg in core platform-adapter business cli vscode mcp)",
+      "Bash(done)",
+      "Bash(npm info:*)",
+      "Bash(npm install:*)",
+      "Bash(npm audit:*)",
+      "Bash(npm ls:*)",
+      "Bash(git add:*)",
+      "Bash(git reset:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(mkdir:*)",
+      "Read(C:\\Users\\IgorJericevich\\Documents\\GitHub\\SharedoCLI/**)",
+      "Read(C:\\Users\\IgorJericevich\\Documents\\GitHub\\SharedoCLI/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,15 +1,32 @@
 {
-    "compilerOptions": {
-      "target": "es5",
-      "module":"CommonJS",
-      "lib": ["es6", "es2015", "dom"],
-      "declaration": true,
-      "outDir": "lib",
-      "rootDir": "src",
-      "strict": true,
-      "types": ["node"],
-      "esModuleInterop": true,
-      "moduleResolution":"node",
-      "watch": true
-    }
-  }
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "lib": ["ES2020"],
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "composite": true
+  },
+  "references": [
+    { "path": "./packages/core" },
+    { "path": "./packages/platform-adapter" },
+    { "path": "./packages/business" },
+    { "path": "./packages/cli" },
+    { "path": "./packages/vscode" },
+    { "path": "./packages/mcp" }
+  ],
+  "files": [],
+  "include": [],
+  "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts", "dist", "lib"]
+}

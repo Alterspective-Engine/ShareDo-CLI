@@ -60,7 +60,7 @@ export class ShareDoMCPServer implements IMCPServer {
         properties: {},
         required: []
       },
-      handler: async (params: any) => {
+      handler: async (_params: any) => {
         return { workflows: [] }; // Placeholder implementation
       }
     });
@@ -76,7 +76,7 @@ export class ShareDoMCPServer implements IMCPServer {
         },
         required: ['workflowId']
       },
-      handler: async (params: any) => {
+      handler: async (_params: any) => {
         return { status: 'coming soon' }; // Placeholder implementation
       }
     });

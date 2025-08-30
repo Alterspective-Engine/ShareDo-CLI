@@ -5,6 +5,7 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosError, AxiosResponse } from 'axios';
 import { IAuthenticationService } from '../auth/interfaces';
 import { ShareDoError } from '../errors';
+import { RequestDeduplicator } from '../utils/request-deduplicator';
 
 export interface IApiClientConfig {
   baseUrl: string;
@@ -14,6 +15,7 @@ export interface IApiClientConfig {
   timeout?: number;
   maxRetries?: number;
   retryDelay?: number;
+  enableDeduplication?: boolean;
 }
 
 export interface IRequestOptions {
@@ -21,6 +23,7 @@ export interface IRequestOptions {
   params?: Record<string, any>;
   timeout?: number;
   skipAuth?: boolean;
+  skipDeduplication?: boolean;
 }
 
 export abstract class BaseApiClient {
@@ -28,16 +31,19 @@ export abstract class BaseApiClient {
   protected authService: IAuthenticationService;
   protected config: IApiClientConfig;
   private retryCount: Map<string, number> = new Map();
+  private deduplicator: RequestDeduplicator;
 
   constructor(config: IApiClientConfig) {
     this.config = {
       timeout: 30000,
       maxRetries: 3,
       retryDelay: 1000,
+      enableDeduplication: true,
       ...config
     };
     
     this.authService = config.authService;
+    this.deduplicator = new RequestDeduplicator();
     
     this.axiosInstance = axios.create({
       baseURL: config.baseUrl,
@@ -180,6 +186,31 @@ export abstract class BaseApiClient {
   // Public API methods
   async get<T>(endpoint: string, options?: IRequestOptions): Promise<T> {
     const requestKey = `GET:${endpoint}`;
+    
+    // Use deduplication if enabled
+    if (this.config.enableDeduplication && !options?.skipDeduplication) {
+      return this.deduplicator.deduplicate(
+        { method: 'GET', url: endpoint, params: options?.params },
+        async () => {
+          try {
+            const response = await this.axiosInstance.get<T>(endpoint, {
+              headers: {
+                ...options?.headers,
+                skipAuth: options?.skipAuth ? 'true' : undefined
+              } as any,
+              params: options?.params,
+              timeout: options?.timeout
+            });
+            this.retryCount.delete(requestKey);
+            return response.data;
+          } catch (error) {
+            throw error;
+          }
+        }
+      );
+    }
+    
+    // Normal request without deduplication
     try {
       const response = await this.axiosInstance.get<T>(endpoint, {
         headers: {
@@ -189,11 +220,9 @@ export abstract class BaseApiClient {
         params: options?.params,
         timeout: options?.timeout
       });
-      // Clear retry count on success to prevent memory leak
       this.retryCount.delete(requestKey);
       return response.data;
     } catch (error) {
-      // Retry count cleared in interceptor on final failure
       throw error;
     }
   }

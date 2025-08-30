@@ -1,0 +1,204 @@
+# ShareDo Core Package - AI Developer Instructions
+
+## 🚨 IMPORTANT: Project Reset Notice
+**Date**: 2025-08-29
+**Status**: Fresh start after initial confusion
+
+The project structure has been completely reorganized. Previously, the entire CLI codebase was mistakenly copied into every worktree. This has now been fixed, and each package has its proper purpose and structure.
+
+## Your Package Identity
+- **Package Name**: `@sharedo/core`
+- **Version**: 1.0.0
+- **Purpose**: Core authentication, API clients, and shared models
+- **Location**: `C:\Users\IgorJericevich\Documents\GitHub\ShareDo-Platform\sharedo-core`
+
+## What This Package Should Contain
+
+### ✅ IN SCOPE for @sharedo/core:
+1. **Authentication Services**
+   - OAuth2 token management
+   - Bearer token handling
+   - Token refresh logic
+   - Impersonation support
+
+2. **API Clients**
+   - BaseApiClient class
+   - Request/response interceptors
+   - Error handling
+   - Rate limiting
+
+3. **Shared Models & Interfaces**
+   - IUser, IWorkflow, IFile interfaces
+   - API response types
+   - Common enums
+   - Error types
+
+4. **Configuration**
+   - Environment management
+   - API endpoints configuration
+   - Server connection settings
+
+### ❌ NOT IN SCOPE (belongs in other packages):
+- CLI commands → `@sharedo/cli`
+- Workflow business logic → `@sharedo/business`
+- File operations → `@sharedo/business`
+- UI/display logic → `@sharedo/cli` or `@sharedo/vscode`
+- Platform-specific code → `@sharedo/platform-adapter`
+
+## Current State of Your Package
+
+### Existing CLI Code to Refactor:
+The `src/` folder currently contains old CLI code that needs to be refactored:
+
+**Keep and refactor these files:**
+- `src/server/authenticate.ts` - Extract authentication logic
+- `src/server/sharedoClient.ts` - Transform into BaseApiClient
+- `src/config/config.ts` - Keep configuration management
+- `src/config/environments.ts` - Keep environment settings
+- `src/enums.ts` - Keep shared enums
+
+**Remove these files (they belong elsewhere):**
+- `src/sharedo*.ts` - CLI commands → move to `@sharedo/cli`
+- `src/Request/Workflows/*` - Business logic → move to `@sharedo/business`
+- `src/Request/File/*` - Business logic → move to `@sharedo/business`
+- `src/project/*` - CLI specific → move to `@sharedo/cli`
+- `src/connect/*` - CLI specific → move to `@sharedo/cli`
+
+## Your Development Tasks
+
+### Phase 1: Clean and Setup (CURRENT)
+1. Create proper `src/index.ts` that exports all public APIs
+2. Move authentication logic from old files into clean modules
+3. Create `AuthenticationService` class
+4. Create `TokenManager` class
+5. Create `BaseApiClient` class
+
+### Phase 2: Core Services
+1. Implement OAuth2 authentication flow
+2. Add token refresh mechanism
+3. Create request/response interceptors
+4. Add proper TypeScript types for all APIs
+
+### Phase 3: Integration Support
+1. Ensure all exports work for other packages
+2. Add comprehensive JSDoc documentation
+3. Create usage examples
+4. Write unit tests
+
+## How to Start Fresh
+
+```bash
+# 1. Clean up old build artifacts
+cd C:\Users\IgorJericevich\Documents\GitHub\ShareDo-Platform\sharedo-core
+rm -rf dist node_modules
+
+# 2. Install dependencies
+npm install
+
+# 3. Create the main index file
+# Create src/index.ts with proper exports
+
+# 4. Build the package
+npm run build
+
+# 5. Watch for changes during development
+npm run watch
+```
+
+## Your Main Entry Point
+
+Create `src/index.ts`:
+```typescript
+// Authentication
+export { AuthenticationService } from './auth/authentication.service';
+export { TokenManager } from './auth/token.manager';
+export * from './auth/interfaces';
+
+// API Clients
+export { BaseApiClient } from './api/base-api.client';
+export * from './api/interfaces';
+
+// Models
+export * from './models';
+
+// Configuration
+export { Config } from './config/config';
+export { Environment } from './config/environments';
+
+// Common
+export * from './errors';
+export * from './constants';
+export * from './utils';
+```
+
+## Dependencies You Can Use
+```json
+{
+  "axios": "^1.3.4",
+  "uuid": "^9.0.0"
+}
+```
+
+## How Other Packages Will Use You
+
+```typescript
+// In @sharedo/cli
+import { AuthenticationService, BaseApiClient } from '@sharedo/core';
+
+const auth = new AuthenticationService();
+await auth.login(username, password);
+
+// In @sharedo/business
+import { BaseApiClient, IWorkflow } from '@sharedo/core';
+
+class WorkflowService extends BaseApiClient {
+  async getWorkflows(): Promise<IWorkflow[]> {
+    return this.get('/api/workflows');
+  }
+}
+```
+
+## Important Resources
+
+### ShareDo Knowledge Base
+**Path**: `C:\Users\IgorJericevich\Alterspective\Alterspective Knowledge Base - Documents\AI Knowledgebase\LearnSD\KB`
+
+### API Documentation
+- Public APIs: See `/docs/SHAREDO_PUBLIC_API_CATALOG.md` in main repo
+- Private APIs: `C:\Users\IgorJericevich\Alterspective\Alterspective Knowledge Base - Documents\AI Knowledgebase\LearnSD\DerivedAPIs`
+
+## Testing Your Package
+
+```bash
+# Run tests
+npm test
+
+# Build
+npm run build
+
+# Verify exports work
+node -e "const core = require('./dist'); console.log(Object.keys(core));"
+```
+
+## Coordination with Other Packages
+
+You are the **foundation** package. Other packages depend on you:
+- `@sharedo/business` needs your API clients and models
+- `@sharedo/cli` needs your authentication
+- `@sharedo/vscode` needs your authentication
+- `@sharedo/mcp` needs your API clients
+
+**Build yourself first!** Others are waiting for your exports.
+
+## Questions or Issues?
+
+If you need clarification:
+1. Check the main repo's `/docs` folder for specifications
+2. Look at `SHARED_CODE_IMPLEMENTATION_GUIDE.md`
+3. Review `API_INTERFACES_AND_TYPES.md`
+
+Remember: You're building the core foundation that everyone else will use. Keep it clean, well-typed, and well-documented!
+
+---
+**Last Updated**: 2025-08-29
+**Package Status**: Fresh start - ready for clean implementation

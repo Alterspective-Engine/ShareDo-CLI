@@ -4,6 +4,7 @@
 
 import { BaseApiClient, IApiClientConfig } from '../base.client';
 import { IWorkflow, IWorkflowSummary } from '../../models';
+import { BulkOperations, IBulkOptions, IBulkResponse } from './bulk-operations';
 
 export interface IWorkflowFilter {
   name?: string;

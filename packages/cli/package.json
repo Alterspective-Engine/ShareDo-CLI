@@ -8,8 +8,8 @@
     "sharedo": "./dist/index.js"
   },
   "scripts": {
-    "build": "tsc -b",
-    "clean": "rimraf dist .tsbuildinfo",
+    "build": "tsc --build",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo",
     "test": "jest",
     "lint": "eslint src --ext .ts",
     "dev": "ts-node src/index.ts"
@@ -25,7 +25,8 @@
     "keytar": "^7.9.0"
   },
   "devDependencies": {
-    "@types/inquirer": "^9.0.7"
+    "@types/inquirer": "^9.0.7",
+    "rimraf": "^5.0.5"
   },
   "publishConfig": {
     "access": "public"

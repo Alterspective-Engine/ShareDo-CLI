@@ -18,8 +18,8 @@
     "views": {}
   },
   "scripts": {
-    "build": "tsc -b",
-    "clean": "rimraf dist .tsbuildinfo",
+    "build": "tsc --build",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo",
     "test": "jest",
     "lint": "eslint src --ext .ts",
     "vscode:prepublish": "npm run build",
@@ -34,7 +34,8 @@
   "devDependencies": {
     "@types/vscode": "^1.85.0",
     "@vscode/test-electron": "^2.3.8",
-    "vsce": "^2.15.0"
+    "vsce": "^2.15.0",
+    "rimraf": "^5.0.5"
   },
   "publishConfig": {
     "access": "public"
