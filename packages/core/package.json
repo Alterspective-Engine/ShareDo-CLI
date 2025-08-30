@@ -1,0 +1,23 @@
+{
+  "name": "@sharedo/core",
+  "version": "1.0.0",
+  "description": "Core utilities and interfaces for ShareDo platform",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rimraf dist .tsbuildinfo",
+    "test": "jest",
+    "lint": "eslint src --ext .ts"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

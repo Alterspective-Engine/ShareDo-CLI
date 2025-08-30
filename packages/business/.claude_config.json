@@ -1,0 +1,224 @@
+{
+  "version": "1.0",
+  "name": "ShareDo Platform Development",
+  "description": "Claude configuration for ShareDo Platform monorepo development",
+  "autoApprove": {
+    "enabled": true,
+    "tools": {
+      "bash": {
+        "patterns": [
+          "npm *",
+          "npm run *",
+          "npm run lint",
+          "npm run lint:*",
+          "npm run test",
+          "npm run test:*",
+          "npm run build",
+          "npm run build:*",
+          "npm run dev",
+          "npm run dev:*",
+          "npm run clean",
+          "npm run clean:*",
+          "npm run format",
+          "npm run format:*",
+          "npm run typecheck",
+          "npm run typecheck:*",
+          "npm run watch",
+          "npm run watch:*",
+          "npm run compile",
+          "npm run compile:*",
+          "npm run start",
+          "npm run start:*",
+          "npm run serve",
+          "npm run serve:*",
+          "npm run bootstrap",
+          "npm run ci",
+          "npm run coverage",
+          "npm run precommit",
+          "npm run prepush",
+          "npm run postinstall",
+          "npm install",
+          "npm install *",
+          "npm ci",
+          "npm update",
+          "npm audit",
+          "npm audit fix",
+          "npm ls",
+          "npm list",
+          "npm link",
+          "npm unlink",
+          "npx *",
+          "node *",
+          "git status",
+          "git diff*",
+          "git log*",
+          "git branch*",
+          "git checkout*",
+          "git add*",
+          "git commit*",
+          "git push*",
+          "git pull*",
+          "git fetch*",
+          "git merge*",
+          "git rebase*",
+          "git stash*",
+          "git worktree*",
+          "lerna *",
+          "lerna run *",
+          "lerna bootstrap",
+          "lerna clean",
+          "lerna exec *",
+          "lerna version",
+          "lerna publish",
+          "tsc *",
+          "tsc --build",
+          "tsc --watch",
+          "jest *",
+          "eslint *",
+          "eslint . --fix",
+          "prettier *",
+          "prettier --write *",
+          "pwd",
+          "ls *",
+          "cd *",
+          "mkdir *",
+          "rm -rf node_modules",
+          "rm -rf dist",
+          "rm -rf lib",
+          "rm -rf build",
+          "rm -rf coverage",
+          "cat *",
+          "echo *",
+          "which *",
+          "where *",
+          "dir *",
+          "powershell *"
+        ]
+      },
+      "read": {
+        "patterns": [
+          "**/*.ts",
+          "**/*.tsx",
+          "**/*.js",
+          "**/*.jsx",
+          "**/*.json",
+          "**/*.md",
+          "**/*.yml",
+          "**/*.yaml",
+          "**/.*rc",
+          "**/.env*",
+          "**/package.json",
+          "**/tsconfig.json",
+          "**/lerna.json",
+          "**/.gitignore",
+          "**/.eslintrc*",
+          "**/.prettierrc*",
+          "**/jest.config*",
+          "**/CLAUDE.md",
+          "**/README.md",
+          "C:\\Users\\IgorJericevich\\Alterspective\\Alterspective Knowledge Base - Documents\\AI Knowledgebase\\LearnSD\\KB/**",
+          "C:\\Users\\IgorJericevich\\Alterspective\\Alterspective Knowledge Base - Documents\\AI Knowledgebase\\LearnSD\\DerivedAPIs/**",
+          "C:\\GitHub\\sharedo-monitoring-specs/**"
+        ]
+      },
+      "write": {
+        "patterns": [
+          "packages/**/*.ts",
+          "packages/**/*.tsx",
+          "packages/**/*.js",
+          "packages/**/*.jsx",
+          "packages/**/*.json",
+          "packages/**/*.md",
+          "src/**/*.ts",
+          "src/**/*.tsx",
+          "src/**/*.js",
+          "src/**/*.jsx",
+          "src/**/*.json",
+          "docs/**/*.md",
+          "scripts/**/*.js",
+          "scripts/**/*.ts",
+          "tests/**/*.ts",
+          "tests/**/*.js",
+          "examples/**/*",
+          "*.json",
+          "*.md",
+          ".env*",
+          ".gitignore",
+          ".eslintrc*",
+          ".prettierrc*",
+          "tsconfig*.json",
+          "jest.config*",
+          "CLAUDE.md"
+        ]
+      },
+      "edit": {
+        "patterns": [
+          "**/*"
+        ]
+      },
+      "multiEdit": {
+        "patterns": [
+          "**/*"
+        ]
+      },
+      "glob": {
+        "patterns": [
+          "**/*"
+        ]
+      },
+      "grep": {
+        "patterns": [
+          "**/*"
+        ]
+      },
+      "ls": {
+        "patterns": [
+          "**/*"
+        ]
+      },
+      "task": {
+        "enabled": true
+      },
+      "webSearch": {
+        "enabled": true
+      },
+      "webFetch": {
+        "enabled": true
+      },
+      "todoWrite": {
+        "enabled": true
+      }
+    }
+  },
+  "permissions": {
+    "fileSystem": {
+      "read": true,
+      "write": true,
+      "delete": true,
+      "create": true
+    },
+    "bash": {
+      "execute": true,
+      "background": true
+    },
+    "network": {
+      "fetch": true,
+      "search": true
+    }
+  },
+  "environment": {
+    "workingDirectory": ".",
+    "paths": {
+      "knowledgeBase": "C:\\Users\\IgorJericevich\\Alterspective\\Alterspective Knowledge Base - Documents\\AI Knowledgebase\\LearnSD\\KB",
+      "derivedAPIs": "C:\\Users\\IgorJericevich\\Alterspective\\Alterspective Knowledge Base - Documents\\AI Knowledgebase\\LearnSD\\DerivedAPIs",
+      "monitoringSpecs": "C:\\GitHub\\sharedo-monitoring-specs"
+    }
+  },
+  "development": {
+    "autoInstallDependencies": true,
+    "autoBuild": true,
+    "autoTest": false,
+    "autoLint": false,
+    "autoFormat": false
+  }
+}

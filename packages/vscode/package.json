@@ -1,0 +1,42 @@
+{
+  "name": "@sharedo/vscode",
+  "version": "1.0.0",
+  "description": "ShareDo VS Code Extension",
+  "main": "dist/extension.js",
+  "types": "dist/extension.d.ts",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [
+    "onCommand:sharedo.connect",
+    "onView:sharedo"
+  ],
+  "contributes": {
+    "commands": [],
+    "configuration": {},
+    "views": {}
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rimraf dist .tsbuildinfo",
+    "test": "jest",
+    "lint": "eslint src --ext .ts",
+    "vscode:prepublish": "npm run build",
+    "compile": "npm run build",
+    "watch": "tsc -watch -b"
+  },
+  "dependencies": {
+    "@sharedo/core": "^1.0.0",
+    "@sharedo/business": "^1.0.0",
+    "@sharedo/platform-adapter": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@vscode/test-electron": "^2.3.8",
+    "vsce": "^2.15.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

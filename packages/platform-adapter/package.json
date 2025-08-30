@@ -1,0 +1,16 @@
+{
+  "name": "@sharedo/platform-adapter",
+  "version": "1.0.0",
+  "description": "Platform abstraction layer for ShareDo",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rimraf dist .tsbuildinfo",
+    "test": "jest",
+    "lint": "eslint src --ext .ts"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

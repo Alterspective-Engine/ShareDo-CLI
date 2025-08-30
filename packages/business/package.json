@@ -1,0 +1,20 @@
+{
+  "name": "@sharedo/business",
+  "version": "1.0.0",
+  "description": "Business logic layer for ShareDo platform",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rimraf dist .tsbuildinfo",
+    "test": "jest",
+    "lint": "eslint src --ext .ts"
+  },
+  "dependencies": {
+    "@sharedo/core": "^1.0.0",
+    "@sharedo/platform-adapter": "^1.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
