@@ -1,0 +1,98 @@
+{
+  "version": "1.0",
+  "name": "ShareDo Core Development",
+  "description": "Ultra-permissive configuration for ShareDo Core development",
+  "autoApprove": {
+    "enabled": true,
+    "allowAll": true,
+    "tools": {
+      "bash": {
+        "enabled": true,
+        "allowAll": true,
+        "patterns": ["*"]
+      },
+      "read": {
+        "enabled": true,
+        "allowAll": true,
+        "patterns": ["*"]
+      },
+      "write": {
+        "enabled": true,
+        "allowAll": true,
+        "patterns": ["*"]
+      },
+      "edit": {
+        "enabled": true,
+        "allowAll": true,
+        "patterns": ["*"]
+      },
+      "multiEdit": {
+        "enabled": true,
+        "allowAll": true,
+        "patterns": ["*"]
+      },
+      "glob": {
+        "enabled": true,
+        "allowAll": true,
+        "patterns": ["*"]
+      },
+      "grep": {
+        "enabled": true,
+        "allowAll": true,
+        "patterns": ["*"]
+      },
+      "ls": {
+        "enabled": true,
+        "allowAll": true,
+        "patterns": ["*"]
+      },
+      "task": {
+        "enabled": true,
+        "allowAll": true
+      },
+      "webSearch": {
+        "enabled": true,
+        "allowAll": true
+      },
+      "webFetch": {
+        "enabled": true,
+        "allowAll": true
+      },
+      "todoWrite": {
+        "enabled": true,
+        "allowAll": true
+      }
+    }
+  },
+  "permissions": {
+    "all": true,
+    "fileSystem": {
+      "read": true,
+      "write": true,
+      "delete": true,
+      "create": true,
+      "all": true
+    },
+    "bash": {
+      "execute": true,
+      "background": true,
+      "all": true
+    },
+    "network": {
+      "fetch": true,
+      "search": true,
+      "all": true
+    }
+  },
+  "development": {
+    "autoInstallDependencies": true,
+    "autoBuild": true,
+    "autoTest": false,
+    "autoLint": false,
+    "autoFormat": false,
+    "allowAll": true
+  },
+  "allowAll": true,
+  "noPrompts": true,
+  "autoApproveAll": true
+}
