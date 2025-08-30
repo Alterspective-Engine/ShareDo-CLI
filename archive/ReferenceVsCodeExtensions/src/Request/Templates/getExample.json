@@ -1,0 +1,132 @@
+{
+    "systemName": "cre-mat-lease-click-and-collect-car-park-licence-march-2022-513600721-1",
+    "id": "52f7449e-e22d-4e91-a7cc-afe70011e2d8",
+    "title": "Click and Collect Car Park Licence - precedent March 2021(513600721.1)",
+    "description": "Click and Collect Car Park Licence - precedent March 2021(513600721.1)",
+    "active": true,
+    "isPinned": false,
+    "categories": [
+        "Coles"
+    ],
+    "processTags": [],
+    "templateType": "document-issued",
+    "sendActivityType": "task-activity-prepare-document",
+    "documentGeneratorId": "openXML",
+    "dataContextTypeSystemName": "matter-real-estate-au",
+    "dataContextTypePath": "/matter/matter-real-estate/matter-real-estate-au/",
+    "templateRepository": "templates",
+    "documentPackContents": [
+        {
+            "id": "4f980e6a-b7d2-4dd6-8506-afe70011e2dd",
+            "order": 1,
+            "templateType": "document",
+            "outputFileName": "[_titleAsFilename].docx",
+            "outputTitle": "Click and Collect Car Park Licence - precedent March 2021(513600721.1)",
+            "copies": 1,
+            "isMandatory": true,
+            "sources": [
+                {
+                    "id": "75889469-f93f-4b1b-86de-afe70011e2dd",
+                    "packDocumentId": "4f980e6a-b7d2-4dd6-8506-afe70011e2dd",
+                    "filePath": "CRE/Documents/Coles/Click and Collect Car Park Licence - Precedent 25 March 2022.DOCX",
+                    "htmlContent": null,
+                    "status": null,
+                    "order": 1,
+                    "rules": []
+                }
+            ]
+        }
+    ],
+    "outputFile": "[_titleAsFilename].docx",
+    "outputTitle": "Click and Collect Car Park Licence - precedent March 2021(513600721.1)",
+    "outputDestinations": [
+        {
+            "typeSystemName": "matter-real-estate-au",
+            "repository": "matter-documents-gsd",
+            "path": "[document.output.selectedFolder]"
+        }
+    ],
+    "defaultOutputDestination": {
+        "typeSystemName": "matter-real-estate-au",
+        "repository": "matter-documents-gsd",
+        "path": "[document.output.selectedFolder]"
+    },
+    "defaultDocumentClassOptionSetId": 5006000,
+    "emailSubject": null,
+    "displayInMenus": true,
+    "legacyPhaseRestrictions": [],
+    "displayContextTypeSystemNames": [],
+    "displayRules": [],
+    "toRoleRequired": false,
+    "toParticipantRole": "",
+    "toRoles": [],
+    "regardingRoleRequired": false,
+    "regardingParticipantRole": "",
+    "regardingRoles": [],
+    "recipientConfig": {
+        "recipientLocationRequired": false
+    },
+    "forms": [],
+    "approvalSystemName": null,
+    "competencyApprovalSystemName": null,
+    "competencySystemNames": [],
+    "generatePdfAutomatically": false,
+    "generatePdfAutomaticallyDeleteOriginalDocument": false,
+    "pdfVersionFileName": "[_titleAsFilename].pdf",
+    "participantSearchScopeSystemName": null,
+    "multiPartyDocumentTemplateSources": [],
+    "documentChannelConfigs": [],
+    "documentChannels": [],
+    "refreshDocumentsOnDelivery": false,
+    "deliveryRefreshTags": [],
+    "questionnaireMenuId": null,
+    "tagSources": "",
+    "tagLibraries": {},
+    "upgradeVersion": "7",
+    "upgradeStatus": null,
+    "upgradeMessage": null,
+    "contentBlock": {
+        "availableForTemplateAuthors": true,
+        "availableForDocumentAuthors": true
+    },
+    "type": {
+        "baseTemplateType": "core-base-document-standard",
+        "generator": "openXML",
+        "isActive": true,
+        "isSystem": false,
+        "systemName": "document-issued",
+        "name": "Document - Issued",
+        "description": "A standard document that will be produced in the system and then will be sent out by whichever delivery method is configured on the template (e.g. email, post )",
+        "iconClass": "fa-file-o",
+        "sendActivityType": "task-activity-prepare-document",
+        "alternateActivityTypes": [],
+        "isMultiParty": false,
+        "isDocument": true,
+        "isEmail": false,
+        "isSms": false,
+        "isBundleSeparator": false,
+        "isEmailNotification": false,
+        "isNotification": false,
+        "isContentBlock": false,
+        "supportsWorkTypeDataContext": true,
+        "isDisplayEnabled": true,
+        "inlineTemplateEditingOnly": false,
+        "supportsAttachments": true,
+        "supportsEnclosures": true,
+        "supportsAlternateTemplates": true,
+        "supportsMultipleTemplates": true,
+        "supportsToRecipient": true,
+        "supportsRegardingRecipient": true,
+        "supportsQuestionnaires": true,
+        "supportsApproval": true,
+        "supportsDelivery": true,
+        "supportsDocumentActions": true,
+        "supportsLegacyTagLibraries": true,
+        "supportsOutput": true,
+        "supportsPdfConversion": true,
+        "supportsProcessTags": true,
+        "supportsContentBlocks": true,
+        "graphName": "doc-gen"
+    },
+    "dataQualityRules": []
+}

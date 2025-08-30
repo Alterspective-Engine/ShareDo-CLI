@@ -1,0 +1,2129 @@
+﻿openapi: 3.0.3
+info:
+  title: Sharedo Integration API
+  description: |
+    API specification for Sharedo Integration functionality.
+    Generated from Nancy module analysis of Sharedo platform v7.8.2.
+    
+    This API provides endpoints for managing integration operations within the Sharedo platform.
+  version: 7.8.2
+  contact:
+    name: Sharedo Support
+    url: https://www.sharedo.com
+
+servers:
+  - url: https://api.sharedo.com
+    description: Production server
+  - url: https://staging-api.sharedo.com
+    description: Staging server
+  - url: http://localhost:8080
+    description: Local development server
+
+security:
+  - SharedoAuth: []
+
+paths:
+  /api/{publicApiName}:
+    get:
+      tags:
+        - Integration
+      summary: GET {publicApiName}
+      operationId: getPI
+      parameters:
+        - name: publicApiName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: publicApiName parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/admin/phases/{phaseSystemName}/transitions:
+    get:
+      tags:
+        - Integration
+      summary: GET transitions
+      operationId: getPhasesTransitions
+      parameters:
+        - name: phaseSystemName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: phaseSystemName parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/admin/sharedo/phases/find:
+    post:
+      tags:
+        - Integration
+      summary: POST find
+      operationId: postPhasesFind
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/admin/sharedoTypes/phases:
+    post:
+      tags:
+        - Integration
+      summary: POST phases
+      operationId: postSharedotypesPhases
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/admin/smartVariables/:
+    get:
+      tags:
+        - Integration
+      summary: GET 
+      operationId: getAdminSmartvariables
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/admin/smartVariables/definition/{systemName}:
+    delete:
+      tags:
+        - Integration
+      summary: DELETE {systemName}
+      operationId: deleteSmartvariablesDefinition
+      parameters:
+        - name: systemName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: systemName parameter
+      responses:
+        '204':
+          description: Resource deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+    get:
+      tags:
+        - Integration
+      summary: GET {systemName}
+      operationId: getSmartvariablesDefinition
+      parameters:
+        - name: systemName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: systemName parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    put:
+      tags:
+        - Integration
+      summary: PUT {systemName}
+      operationId: putSmartvariablesDefinition
+      parameters:
+        - name: systemName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: systemName parameter
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for PUT operation
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/admin/smartVariables/definition/{systemName}/isUnique:
+    get:
+      tags:
+        - Integration
+      summary: GET isUnique
+      operationId: getDefinitionIsunique
+      parameters:
+        - name: systemName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: systemName parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/admin/smartVariables/values/{systemName}:
+    get:
+      tags:
+        - Integration
+      summary: GET {systemName}
+      operationId: getSmartvariablesValues
+      parameters:
+        - name: systemName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: systemName parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    put:
+      tags:
+        - Integration
+      summary: PUT {systemName}
+      operationId: putSmartvariablesValues
+      parameters:
+        - name: systemName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: systemName parameter
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for PUT operation
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/admin/smartVariables/values/{systemName}/{context}:
+    delete:
+      tags:
+        - Integration
+      summary: DELETE {context}
+      operationId: deleteSmartvariablesValues
+      parameters:
+        - name: systemName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: systemName parameter
+        - name: context
+          in: path
+          required: true
+          schema:
+            type: string
+          description: context parameter
+      responses:
+        '204':
+          description: Resource deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/bulkAssign/options:
+    post:
+      tags:
+        - Integration
+      summary: POST options
+      operationId: postBulkassignOptions
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/bulkAssign/related/{id}:
+    post:
+      tags:
+        - Integration
+      summary: POST {id}
+      operationId: postBulkassignRelated
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: id parameter
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/client/contract:
+    get:
+      tags:
+        - Integration
+      summary: GET contract
+      operationId: getClientContract
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/dpaCheck/questionSets:
+    get:
+      tags:
+        - Integration
+      summary: GET questionSets
+      operationId: getDpacheckQuestionsets
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/dpaCheck/questionSets/{systemName}:
+    delete:
+      tags:
+        - Integration
+      summary: DELETE {systemName}
+      operationId: deleteDpacheckQuestionsets
+      parameters:
+        - name: systemName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: systemName parameter
+      responses:
+        '204':
+          description: Resource deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+    get:
+      tags:
+        - Integration
+      summary: GET {systemName}
+      operationId: getDpacheckQuestionsets
+      parameters:
+        - name: systemName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: systemName parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    put:
+      tags:
+        - Integration
+      summary: PUT {systemName}
+      operationId: putDpacheckQuestionsets
+      parameters:
+        - name: systemName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: systemName parameter
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for PUT operation
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/dpaCheck/questionSets/{systemName}/_exists:
+    get:
+      tags:
+        - Integration
+      summary: GET _exists
+      operationId: getQuestionsets_Exists
+      parameters:
+        - name: systemName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: systemName parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/dpaCheck/questionSets/{systemName}/buildAnswersForContext/{contextId:guid}:
+    post:
+      tags:
+        - Integration
+      summary: POST {contextId:guid}
+      operationId: postQuestionsetsBuildanswersforcontext
+      parameters:
+        - name: systemName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: systemName parameter
+        - name: contextId:guid
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: contextId:guid parameter
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/graph/scripting/functions/cache:
+    delete:
+      tags:
+        - Integration
+      summary: DELETE cache
+      operationId: deleteFunctionsCache
+      responses:
+        '204':
+          description: Resource deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/graph/scripting/functions/cache/local:
+    delete:
+      tags:
+        - Integration
+      summary: DELETE local
+      operationId: deleteCacheLocal
+      responses:
+        '204':
+          description: Resource deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/graph/scripting/functions/validate:
+    post:
+      tags:
+        - Integration
+      summary: POST validate
+      operationId: postFunctionsValidate
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/incident/{id}/description:
+    get:
+      tags:
+        - Integration
+      summary: GET description
+      operationId: getIncidentDescription
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: id parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/infotrack/my/details:
+    get:
+      tags:
+        - Integration
+      summary: GET details
+      operationId: getMyDetails
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    post:
+      tags:
+        - Integration
+      summary: POST details
+      operationId: postMyDetails
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/infotrack/my/status:
+    get:
+      tags:
+        - Integration
+      summary: GET status
+      operationId: getMyStatus
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/matter/duplicatesearch/client/{id}/divisions:
+    get:
+      tags:
+        - Integration
+      summary: GET divisions
+      operationId: getClientDivisions
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: id parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/matter/duplicatesearch/referencedata:
+    get:
+      tags:
+        - Integration
+      summary: GET referencedata
+      operationId: getDuplicatesearchReferencedata
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/matter/duplicatesearch/search:
+    post:
+      tags:
+        - Integration
+      summary: POST search
+      operationId: postDuplicatesearchSearch
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/matters/radar:
+    get:
+      tags:
+        - Integration
+      summary: GET radar
+      operationId: getMattersRadar
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/modeller/referenceData/scorecardtemplate:
+    get:
+      tags:
+        - Integration
+      summary: GET scorecardtemplate
+      operationId: getReferencedataScorecardtemplate
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/moj/test/rta/addAttachmentNote:
+    post:
+      tags:
+        - Integration
+      summary: POST addAttachmentNote
+      operationId: postRtaAddattachmentnote
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/moj/test/rta/getClaimsList:
+    get:
+      tags:
+        - Integration
+      summary: GET getClaimsList
+      operationId: getRtaGetclaimslist
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/ods/organisations:
+    post:
+      tags:
+        - Integration
+      summary: POST organisations
+      operationId: postOdsOrganisations
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/ods/organisations/:
+    get:
+      tags:
+        - Integration
+      summary: GET 
+      operationId: getOdsOrganisations
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/ods/organisations/{orgId}:
+    get:
+      tags:
+        - Integration
+      summary: GET {orgId}
+      operationId: getOdsOrganisations
+      parameters:
+        - name: orgId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: orgId parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    post:
+      tags:
+        - Integration
+      summary: POST {orgId}
+      operationId: postOdsOrganisations
+      parameters:
+        - name: orgId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: orgId parameter
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/ods/organisations/{orgId}/deactivate:
+    post:
+      tags:
+        - Integration
+      summary: POST deactivate
+      operationId: postOrganisationsDeactivate
+      parameters:
+        - name: orgId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: orgId parameter
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/odsTypes/forQuickLinks:
+    get:
+      tags:
+        - Integration
+      summary: GET forQuickLinks
+      operationId: getOdstypesForquicklinks
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/pageview/:
+    post:
+      tags:
+        - Integration
+      summary: POST 
+      operationId: postApiPageview
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/pageview/summary:
+    post:
+      tags:
+        - Integration
+      summary: POST summary
+      operationId: postPageviewSummary
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/path:
+    delete:
+      tags:
+        - Integration
+      summary: DELETE path
+      operationId: deleteApiPath
+      responses:
+        '204':
+          description: Resource deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+    get:
+      tags:
+        - Integration
+      summary: GET path
+      operationId: getApiPath
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    patch:
+      tags:
+        - Integration
+      summary: PATCH path
+      operationId: patchApiPath
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for PATCH operation
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+    post:
+      tags:
+        - Integration
+      summary: POST path
+      operationId: postApiPath
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+    put:
+      tags:
+        - Integration
+      summary: PUT path
+      operationId: putApiPath
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for PUT operation
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/relatedSharedos/{forId:guid}:
+    delete:
+      tags:
+        - Integration
+      summary: DELETE {forId:guid}
+      operationId: deleteApiRelatedsharedos
+      parameters:
+        - name: forId:guid
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: forId:guid parameter
+      responses:
+        '204':
+          description: Resource deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+    get:
+      tags:
+        - Integration
+      summary: GET {forId:guid}
+      operationId: getApiRelatedsharedos
+      parameters:
+        - name: forId:guid
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: forId:guid parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/relatedSharedos/{forId:guid}/allowedRelationships/{ofType}:
+    get:
+      tags:
+        - Integration
+      summary: GET {ofType}
+      operationId: getRelatedsharedosAllowedrelationships
+      parameters:
+        - name: forId:guid
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: forId:guid parameter
+        - name: ofType
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ofType parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/relatedSharedos/{forId:guid}/allowedRelationships/{ofType}/typePaths:
+    get:
+      tags:
+        - Integration
+      summary: GET typePaths
+      operationId: getAllowedrelationshipsTypepaths
+      parameters:
+        - name: forId:guid
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: forId:guid parameter
+        - name: ofType
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ofType parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/relatedSharedos/allowedRelationships/{ofType}:
+    get:
+      tags:
+        - Integration
+      summary: GET {ofType}
+      operationId: getRelatedsharedosAllowedrelationships
+      parameters:
+        - name: ofType
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ofType parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/relatedSharedos/infoFor/{forId:guid}:
+    get:
+      tags:
+        - Integration
+      summary: GET {forId:guid}
+      operationId: getRelatedsharedosInfofor
+      parameters:
+        - name: forId:guid
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: forId:guid parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/relatedSharedos/leftToRight/{forId:guid}:
+    get:
+      tags:
+        - Integration
+      summary: GET {forId:guid}
+      operationId: getRelatedsharedosLefttoright
+      parameters:
+        - name: forId:guid
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: forId:guid parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/relatedSharedos/rightToLeft/{forId:guid}:
+    get:
+      tags:
+        - Integration
+      summary: GET {forId:guid}
+      operationId: getRelatedsharedosRighttoleft
+      parameters:
+        - name: forId:guid
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: forId:guid parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/rulesEngine/_selectors/phase/:
+    post:
+      tags:
+        - Integration
+      summary: POST 
+      operationId: post_SelectorsPhase
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/rulesEngine/_selectors/phase/autocomplete:
+    post:
+      tags:
+        - Integration
+      summary: POST autocomplete
+      operationId: postPhaseAutocomplete
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/rulesEngine/_selectors/teams/:
+    post:
+      tags:
+        - Integration
+      summary: POST 
+      operationId: post_SelectorsTeams
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/sharedo/{sharedoId:guid}/{typeName}:
+    get:
+      tags:
+        - Integration
+      summary: GET {typeName}
+      operationId: getApiSharedo
+      parameters:
+        - name: sharedoId:guid
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: sharedoId:guid parameter
+        - name: typeName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: typeName parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/sharedo/{sharedoId:guid}/childrenByTagPrefix/{tag}/{isOpen?true}:
+    get:
+      tags:
+        - Integration
+      summary: GET {isOpen?true}
+      operationId: getSharedoChildrenbytagprefix
+      parameters:
+        - name: sharedoId:guid
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: sharedoId:guid parameter
+        - name: tag
+          in: path
+          required: true
+          schema:
+            type: string
+          description: tag parameter
+        - name: isOpen?true
+          in: path
+          required: true
+          schema:
+            type: string
+          description: isOpen?true parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/sharedo/{sharedoId:guid}/dpaCheck/{id:guid}:
+    get:
+      tags:
+        - Integration
+      summary: GET {id:guid}
+      operationId: getSharedoDpacheck
+      parameters:
+        - name: sharedoId:guid
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: sharedoId:guid parameter
+        - name: id:guid
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: id:guid parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/sharedo/{sharedoId:guid}/infotrack/launchurl:
+    get:
+      tags:
+        - Integration
+      summary: GET launchurl
+      operationId: getInfotrackLaunchurl
+      parameters:
+        - name: sharedoId:guid
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: sharedoId:guid parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/sharedo/{sharedoId:guid}/openChildren:
+    get:
+      tags:
+        - Integration
+      summary: GET openChildren
+      operationId: getSharedoOpenchildren
+      parameters:
+        - name: sharedoId:guid
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: sharedoId:guid parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/sharedo/{sharedoId:guid}/openChildren/{typeName}:
+    get:
+      tags:
+        - Integration
+      summary: GET {typeName}
+      operationId: getSharedoOpenchildren
+      parameters:
+        - name: sharedoId:guid
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: sharedoId:guid parameter
+        - name: typeName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: typeName parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/sharedo/search:
+    post:
+      tags:
+        - Integration
+      summary: POST search
+      operationId: postSharedoSearch
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/sharedo/search/referencedata:
+    get:
+      tags:
+        - Integration
+      summary: GET referencedata
+      operationId: getSearchReferencedata
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/sharedoTypes/{typeSystemName}:
+    get:
+      tags:
+        - Integration
+      summary: GET {typeSystemName}
+      operationId: getApiSharedotypes
+      parameters:
+        - name: typeSystemName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: typeSystemName parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/sharedoTypes/{typeSystemName}/workScheduling:
+    get:
+      tags:
+        - Integration
+      summary: GET workScheduling
+      operationId: getSharedotypesWorkscheduling
+      parameters:
+        - name: typeSystemName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: typeSystemName parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/sharedoTypes/byTypePath/{typePath}:
+    get:
+      tags:
+        - Integration
+      summary: GET {typePath}
+      operationId: getSharedotypesBytypepath
+      parameters:
+        - name: typePath
+          in: path
+          required: true
+          schema:
+            type: string
+          description: typePath parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/sharedoTypes/tree/:
+    get:
+      tags:
+        - Integration
+      summary: GET 
+      operationId: getSharedotypesTree
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/wordaddin/contentBlockTypes:
+    get:
+      tags:
+        - Integration
+      summary: GET contentBlockTypes
+      operationId: getWordaddinContentblocktypes
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  api/ods/{odsId}/connections/stats:
+    get:
+      tags:
+        - Integration
+      summary: GET stats
+      operationId: getConnectionsStats
+      parameters:
+        - name: odsId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: odsId parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  api/ods/{odsId}/connections/stats/connection/{connectionSystemName}:
+    get:
+      tags:
+        - Integration
+      summary: GET {connectionSystemName}
+      operationId: getStatsConnection
+      parameters:
+        - name: odsId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: odsId parameter
+        - name: connectionSystemName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: connectionSystemName parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  api/ods/{odsId}/connections/stats/sharedo-breakdown:
+    post:
+      tags:
+        - Integration
+      summary: POST sharedo-breakdown
+      operationId: postStatsSharedo-Breakdown
+      parameters:
+        - name: odsId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: odsId parameter
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  api/sharedo/tags:
+    get:
+      tags:
+        - Integration
+      summary: GET tags
+      operationId: getSharedoTags
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+components:
+  securitySchemes:
+    SharedoAuth:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://auth.sharedo.com/oauth/authorize
+          tokenUrl: https://auth.sharedo.com/oauth/token
+          scopes:
+            read: Read access to resources
+            write: Write access to resources
+            admin: Administrative access
+
+  responses:
+    BadRequest:
+      description: Invalid request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    Unauthorized:
+      description: Authentication required
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    Forbidden:
+      description: Insufficient permissions
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+
+  schemas:
+    Error:
+      type: object
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
+        details:
+          type: string
+      required:
+        - code
+        - message

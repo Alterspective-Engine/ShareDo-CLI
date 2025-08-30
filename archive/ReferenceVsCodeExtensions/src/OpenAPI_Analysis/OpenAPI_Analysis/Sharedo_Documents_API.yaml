@@ -1,0 +1,290 @@
+﻿openapi: 3.0.3
+info:
+  title: Sharedo Documents API
+  description: |
+    API specification for Sharedo Documents functionality.
+    Generated from Nancy module analysis of Sharedo platform v7.8.2.
+    
+    This API provides endpoints for managing documents operations within the Sharedo platform.
+  version: 7.8.2
+  contact:
+    name: Sharedo Support
+    url: https://www.sharedo.com
+
+servers:
+  - url: https://api.sharedo.com
+    description: Production server
+  - url: https://staging-api.sharedo.com
+    description: Staging server
+  - url: http://localhost:8080
+    description: Local development server
+
+security:
+  - SharedoAuth: []
+
+paths:
+  /debug/docgen/document/{fileId:guid}/view:
+    get:
+      tags:
+        - Documents
+      summary: GET view
+      operationId: getDocumentView
+      parameters:
+        - name: fileId:guid
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: fileId:guid parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /debug/docgen/document/advisories:
+    post:
+      tags:
+        - Documents
+      summary: POST advisories
+      operationId: postDocumentAdvisories
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /debug/docgen/document/inspect:
+    post:
+      tags:
+        - Documents
+      summary: POST inspect
+      operationId: postDocumentInspect
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /debug/docgen/document/sendHtmlEmail:
+    post:
+      tags:
+        - Documents
+      summary: POST sendHtmlEmail
+      operationId: postDocumentSendhtmlemail
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /debug/docgen/document/test:
+    post:
+      tags:
+        - Documents
+      summary: POST test
+      operationId: postDocumentTest
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /debug/docgen/document/testHtmlBlock:
+    post:
+      tags:
+        - Documents
+      summary: POST testHtmlBlock
+      operationId: postDocumentTesthtmlblock
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /debug/docgen/document/testHtmlEmail:
+    post:
+      tags:
+        - Documents
+      summary: POST testHtmlEmail
+      operationId: postDocumentTesthtmlemail
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /debug/docgen/document/validate:
+    post:
+      tags:
+        - Documents
+      summary: POST validate
+      operationId: postDocumentValidate
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+
+components:
+  securitySchemes:
+    SharedoAuth:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://auth.sharedo.com/oauth/authorize
+          tokenUrl: https://auth.sharedo.com/oauth/token
+          scopes:
+            read: Read access to resources
+            write: Write access to resources
+            admin: Administrative access
+
+  responses:
+    BadRequest:
+      description: Invalid request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    Unauthorized:
+      description: Authentication required
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    Forbidden:
+      description: Insufficient permissions
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+
+  schemas:
+    Error:
+      type: object
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
+        details:
+          type: string
+      required:
+        - code
+        - message

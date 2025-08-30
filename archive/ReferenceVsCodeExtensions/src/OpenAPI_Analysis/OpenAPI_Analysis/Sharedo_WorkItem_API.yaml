@@ -1,0 +1,778 @@
+openapi: 3.0.3
+info:
+  title: Sharedo WorkItem API v1
+  description: Public API for work item management, manipulation, and lifecycle operations in Sharedo platform
+  version: 1.0.0
+  contact:
+    name: Sharedo Platform
+    url: https://sharedo.com
+servers:
+  - url: https://api.sharedo.com
+    description: Production server
+  - url: https://dev-api.sharedo.com
+    description: Development server
+
+paths:
+  /api/v1/public/workItem:
+    get:
+      summary: Find work items by query
+      description: Search for work items using query parameters
+      tags:
+        - Work Items
+      parameters:
+        - name: query
+          in: query
+          description: Search query
+          schema:
+            type: string
+        - name: limit
+          in: query
+          description: Maximum number of results
+          schema:
+            type: integer
+            default: 50
+        - name: offset
+          in: query
+          description: Number of results to skip
+          schema:
+            type: integer
+            default: 0
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/WorkItem'
+                  totalCount:
+                    type: integer
+                  hasMore:
+                    type: boolean
+    post:
+      summary: Create new work item
+      description: Create a new work item with the provided data
+      tags:
+        - Work Items
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateWorkItemRequest'
+      responses:
+        '201':
+          description: Work item created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WorkItem'
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+
+  /api/v1/public/workItem/findByQuery:
+    post:
+      summary: Find work items by complex query
+      description: Search for work items using complex query criteria
+      tags:
+        - Work Items
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                criteria:
+                  type: object
+                  description: Search criteria
+                pagination:
+                  type: object
+                  properties:
+                    limit:
+                      type: integer
+                    offset:
+                      type: integer
+                sorting:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      field:
+                        type: string
+                      direction:
+                        type: string
+                        enum: [asc, desc]
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/WorkItem'
+                  totalCount:
+                    type: integer
+
+  /api/v1/public/workItem/{workItemId}:
+    get:
+      summary: Get work item by ID
+      description: Retrieve a specific work item by its ID
+      tags:
+        - Work Items
+      parameters:
+        - name: workItemId
+          in: path
+          required: true
+          description: The unique identifier of the work item
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WorkItem'
+        '404':
+          description: Work item not found
+        '401':
+          description: Unauthorized
+    put:
+      summary: Update work item
+      description: Update an existing work item with new data
+      tags:
+        - Work Items
+      parameters:
+        - name: workItemId
+          in: path
+          required: true
+          description: The unique identifier of the work item
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateWorkItemRequest'
+      responses:
+        '200':
+          description: Work item updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WorkItem'
+        '404':
+          description: Work item not found
+        '400':
+          description: Bad request
+
+  /api/v1/public/workItem/{workItemId}/attributes/{attributeSystemName}:
+    get:
+      summary: Get work item attribute
+      description: Retrieve a specific attribute value for a work item
+      tags:
+        - Work Item Attributes
+      parameters:
+        - name: workItemId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+        - name: attributeSystemName
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Attribute value retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  attributeName:
+                    type: string
+                  value:
+                    type: object
+                  dataType:
+                    type: string
+    put:
+      summary: Update work item attribute
+      description: Update a specific attribute value for a work item
+      tags:
+        - Work Item Attributes
+      parameters:
+        - name: workItemId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+        - name: attributeSystemName
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                value:
+                  type: object
+                  description: New attribute value
+      responses:
+        '200':
+          description: Attribute updated successfully
+        '404':
+          description: Work item or attribute not found
+        '400':
+          description: Bad request
+
+  /api/v1/public/workItem/{workItemId}/participants:
+    get:
+      summary: Get work item participants
+      description: Retrieve all participants associated with a work item
+      tags:
+        - Work Item Participants
+      parameters:
+        - name: workItemId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Participants retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Participant'
+    post:
+      summary: Add participant to work item
+      description: Add a new participant to a work item
+      tags:
+        - Work Item Participants
+      parameters:
+        - name: workItemId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddParticipantRequest'
+      responses:
+        '201':
+          description: Participant added successfully
+        '400':
+          description: Bad request
+
+  /api/v1/public/workItem/{workItemId}/phase:
+    get:
+      summary: Get work item phase
+      description: Retrieve the current phase of a work item
+      tags:
+        - Work Item Phase
+      parameters:
+        - name: workItemId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Phase retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Phase'
+    put:
+      summary: Update work item phase
+      description: Transition a work item to a new phase
+      tags:
+        - Work Item Phase
+      parameters:
+        - name: workItemId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                newPhase:
+                  type: string
+                  description: Target phase system name
+                comment:
+                  type: string
+                  description: Optional comment for the transition
+      responses:
+        '200':
+          description: Phase updated successfully
+        '400':
+          description: Invalid phase transition
+        '404':
+          description: Work item not found
+
+  /api/v1/public/workItem/{workItemId}/chronology:
+    get:
+      summary: Get work item chronology
+      description: Retrieve the chronological history of a work item
+      tags:
+        - Work Item Chronology
+      parameters:
+        - name: workItemId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+        - name: rowsPerPage
+          in: query
+          schema:
+            type: integer
+            default: 20
+        - name: startPage
+          in: query
+          schema:
+            type: integer
+            default: 1
+      responses:
+        '200':
+          description: Chronology retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  entries:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ChronologyEntry'
+                  totalCount:
+                    type: integer
+    post:
+      summary: Add chronology entry
+      description: Add a new entry to the work item chronology
+      tags:
+        - Work Item Chronology
+      parameters:
+        - name: workItemId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateChronologyEntryRequest'
+      responses:
+        '201':
+          description: Chronology entry created successfully
+
+  /api/v1/public/workItem/{workItemId}/comments:
+    get:
+      summary: Get work item comments
+      description: Retrieve comments for a work item
+      tags:
+        - Work Item Comments
+      parameters:
+        - name: workItemId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+        - name: rowsPerPage
+          in: query
+          schema:
+            type: integer
+            default: 10
+        - name: startPage
+          in: query
+          schema:
+            type: integer
+            default: 1
+      responses:
+        '200':
+          description: Comments retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  comments:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Comment'
+                  totalCount:
+                    type: integer
+    post:
+      summary: Add comment to work item
+      description: Add a new comment to a work item
+      tags:
+        - Work Item Comments
+      parameters:
+        - name: workItemId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                content:
+                  type: string
+                  description: Comment content
+                isPrivate:
+                  type: boolean
+                  description: Whether comment is private
+      responses:
+        '201':
+          description: Comment added successfully
+
+  /api/v1/public/workItem/{workItemId}/dms:
+    get:
+      summary: Get work item document folders
+      description: Retrieve document management system folders for a work item
+      tags:
+        - Work Item Documents
+      parameters:
+        - name: workItemId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Document folders retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DocumentFolder'
+
+  /api/v1/public/workItem/{workItemId}/dms/{path}:
+    get:
+      summary: Get documents at path
+      description: Retrieve documents at a specific path within the work item DMS
+      tags:
+        - Work Item Documents
+      parameters:
+        - name: workItemId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+        - name: path
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Document path within DMS
+      responses:
+        '200':
+          description: Documents retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Document'
+
+  /api/v1/public/workItem/{workItemId}/audit:
+    post:
+      summary: Audit work item
+      description: Record an audit entry for a work item
+      tags:
+        - Work Item Audit
+      parameters:
+        - name: workItemId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                action:
+                  type: string
+                  description: Action performed
+                details:
+                  type: object
+                  description: Audit details
+      responses:
+        '201':
+          description: Audit entry created successfully
+
+components:
+  schemas:
+    WorkItem:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          description: Unique identifier for the work item
+        reference:
+          type: string
+          description: Work item reference number
+        title:
+          type: string
+          description: Work item title
+        description:
+          type: string
+          description: Work item description
+        type:
+          type: string
+          description: Work item type
+        phase:
+          type: string
+          description: Current phase
+        status:
+          type: string
+          description: Current status
+        created:
+          type: string
+          format: date-time
+          description: Creation timestamp
+        modified:
+          type: string
+          format: date-time
+          description: Last modification timestamp
+        attributes:
+          type: object
+          description: Work item attributes
+
+    CreateWorkItemRequest:
+      type: object
+      required:
+        - title
+        - type
+      properties:
+        title:
+          type: string
+          description: Work item title
+        description:
+          type: string
+          description: Work item description
+        type:
+          type: string
+          description: Work item type system name
+        attributes:
+          type: object
+          description: Initial attribute values
+
+    UpdateWorkItemRequest:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Work item title
+        description:
+          type: string
+          description: Work item description
+        attributes:
+          type: object
+          description: Updated attribute values
+
+    Participant:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        role:
+          type: string
+        type:
+          type: string
+          enum: [person, organization]
+        contactDetails:
+          type: object
+
+    AddParticipantRequest:
+      type: object
+      required:
+        - participantId
+        - role
+      properties:
+        participantId:
+          type: string
+          format: uuid
+        role:
+          type: string
+        isPrimary:
+          type: boolean
+
+    Phase:
+      type: object
+      properties:
+        systemName:
+          type: string
+        displayName:
+          type: string
+        description:
+          type: string
+        availableTransitions:
+          type: array
+          items:
+            type: string
+
+    ChronologyEntry:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        timestamp:
+          type: string
+          format: date-time
+        entryType:
+          type: string
+        description:
+          type: string
+        user:
+          type: string
+        details:
+          type: object
+
+    CreateChronologyEntryRequest:
+      type: object
+      required:
+        - entryType
+        - description
+      properties:
+        entryType:
+          type: string
+        description:
+          type: string
+        details:
+          type: object
+
+    Comment:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        content:
+          type: string
+        author:
+          type: string
+        timestamp:
+          type: string
+          format: date-time
+        isPrivate:
+          type: boolean
+
+    DocumentFolder:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        path:
+          type: string
+        parentId:
+          type: string
+        created:
+          type: string
+          format: date-time
+
+    Document:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        size:
+          type: integer
+        mimeType:
+          type: string
+        path:
+          type: string
+        uploadedBy:
+          type: string
+        uploadedAt:
+          type: string
+          format: date-time
+
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+security:
+  - bearerAuth: []
+
+tags:
+  - name: Work Items
+    description: Work item CRUD operations
+  - name: Work Item Attributes
+    description: Work item attribute management
+  - name: Work Item Participants
+    description: Work item participant management
+  - name: Work Item Phase
+    description: Work item phase and status management
+  - name: Work Item Chronology
+    description: Work item history and chronology
+  - name: Work Item Comments
+    description: Work item comment management
+  - name: Work Item Documents
+    description: Work item document management
+  - name: Work Item Audit
+    description: Work item audit and compliance

@@ -1,0 +1,403 @@
+openapi: 3.0.3
+info:
+  title: Sharedo FormBuilder API
+  description: API for form building, form management, and form rendering operations in Sharedo platform
+  version: 1.0.0
+  contact:
+    name: Sharedo Platform
+    url: https://sharedo.com
+servers:
+  - url: https://api.sharedo.com
+    description: Production server
+  - url: https://dev-api.sharedo.com
+    description: Development server
+
+paths:
+  /api/formbuilder/forms:
+    get:
+      summary: Get all forms
+      description: Retrieve a list of all forms available in the system
+      tags:
+        - Forms
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Form'
+        '401':
+          description: Unauthorized
+        '500':
+          description: Internal server error
+    post:
+      summary: Create a new form
+      description: Create a new form with the provided configuration
+      tags:
+        - Forms
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateFormRequest'
+      responses:
+        '201':
+          description: Form created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Form'
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+
+  /api/formbuilder/forms/{formId}:
+    get:
+      summary: Get form by ID
+      description: Retrieve a specific form by its ID
+      tags:
+        - Forms
+      parameters:
+        - name: formId
+          in: path
+          required: true
+          description: The unique identifier of the form
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Form'
+        '404':
+          description: Form not found
+        '401':
+          description: Unauthorized
+    put:
+      summary: Update form
+      description: Update an existing form with new configuration
+      tags:
+        - Forms
+      parameters:
+        - name: formId
+          in: path
+          required: true
+          description: The unique identifier of the form
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateFormRequest'
+      responses:
+        '200':
+          description: Form updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Form'
+        '404':
+          description: Form not found
+        '400':
+          description: Bad request
+    delete:
+      summary: Delete form
+      description: Delete an existing form
+      tags:
+        - Forms
+      parameters:
+        - name: formId
+          in: path
+          required: true
+          description: The unique identifier of the form
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '204':
+          description: Form deleted successfully
+        '404':
+          description: Form not found
+        '401':
+          description: Unauthorized
+
+  /api/formbuilder/{formId}:
+    post:
+      summary: Render form
+      description: Render a form with provided data and return the rendered HTML
+      tags:
+        - Form Rendering
+      parameters:
+        - name: formId
+          in: path
+          required: true
+          description: The unique identifier of the form
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: object
+                  description: Form data to be used for rendering
+                options:
+                  type: object
+                  description: Rendering options
+      responses:
+        '200':
+          description: Form rendered successfully
+          content:
+            text/html:
+              schema:
+                type: string
+                description: Rendered HTML content
+        '404':
+          description: Form not found
+        '400':
+          description: Bad request
+
+  /api/formbuilder/_locks/{formId}/{sharedoId}:
+    get:
+      summary: Check form lock status
+      description: Check if a form is currently locked for editing
+      tags:
+        - Form Locks
+      parameters:
+        - name: formId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+        - name: sharedoId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Lock status retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  isLocked:
+                    type: boolean
+                  lockedBy:
+                    type: string
+                  lockTime:
+                    type: string
+                    format: date-time
+    post:
+      summary: Acquire form lock
+      description: Acquire a lock on a form for editing
+      tags:
+        - Form Locks
+      parameters:
+        - name: formId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+        - name: sharedoId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Lock acquired successfully
+        '409':
+          description: Form is already locked
+    delete:
+      summary: Release form lock
+      description: Release a lock on a form
+      tags:
+        - Form Locks
+      parameters:
+        - name: formId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+        - name: sharedoId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '204':
+          description: Lock released successfully
+        '404':
+          description: Lock not found
+
+  /api/formbuilder/snippets:
+    get:
+      summary: Get form snippets
+      description: Retrieve available form snippets for use in form building
+      tags:
+        - Form Building
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FormSnippet'
+
+  /api/formbuilder/sharedoAssociations:
+    post:
+      summary: Create Sharedo associations
+      description: Create associations between forms and Sharedo entities
+      tags:
+        - Form Associations
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                formId:
+                  type: string
+                  format: uuid
+                sharedoId:
+                  type: string
+                  format: uuid
+                associationType:
+                  type: string
+      responses:
+        '201':
+          description: Association created successfully
+        '400':
+          description: Bad request
+
+components:
+  schemas:
+    Form:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          description: Unique identifier for the form
+        name:
+          type: string
+          description: Name of the form
+        description:
+          type: string
+          description: Description of the form
+        configuration:
+          type: object
+          description: Form configuration object
+        created:
+          type: string
+          format: date-time
+          description: Creation timestamp
+        modified:
+          type: string
+          format: date-time
+          description: Last modification timestamp
+        version:
+          type: integer
+          description: Form version number
+        status:
+          type: string
+          enum: [draft, published, archived]
+          description: Current status of the form
+
+    CreateFormRequest:
+      type: object
+      required:
+        - name
+        - configuration
+      properties:
+        name:
+          type: string
+          description: Name of the form
+        description:
+          type: string
+          description: Description of the form
+        configuration:
+          type: object
+          description: Form configuration object
+
+    UpdateFormRequest:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Name of the form
+        description:
+          type: string
+          description: Description of the form
+        configuration:
+          type: object
+          description: Form configuration object
+        status:
+          type: string
+          enum: [draft, published, archived]
+          description: Current status of the form
+
+    FormSnippet:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Snippet identifier
+        name:
+          type: string
+          description: Snippet name
+        category:
+          type: string
+          description: Snippet category
+        template:
+          type: string
+          description: Snippet template content
+        description:
+          type: string
+          description: Snippet description
+
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+security:
+  - bearerAuth: []
+
+tags:
+  - name: Forms
+    description: Form management operations
+  - name: Form Rendering
+    description: Form rendering and display operations
+  - name: Form Locks
+    description: Form locking for editing operations
+  - name: Form Building
+    description: Form building utilities and components
+  - name: Form Associations
+    description: Form association management

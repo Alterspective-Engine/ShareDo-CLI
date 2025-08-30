@@ -1,0 +1,662 @@
+openapi: 3.0.3
+info:
+  title: Sharedo ExecutionEngine API
+  description: API for workflow execution engine, plan management, and process automation in Sharedo platform
+  version: 1.0.0
+  contact:
+    name: Sharedo Platform
+    url: https://sharedo.com
+servers:
+  - url: https://api.sharedo.com
+    description: Production server
+  - url: https://dev-api.sharedo.com
+    description: Development server
+
+paths:
+  /api/executionengine/plans/all:
+    get:
+      summary: Get all execution plans
+      description: Retrieve all available execution plans in the system
+      tags:
+        - Execution Plans
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ExecutionPlan'
+        '401':
+          description: Unauthorized
+        '500':
+          description: Internal server error
+
+  /api/executionengine/plans/executing:
+    get:
+      summary: Get executing plans
+      description: Retrieve all currently executing plans
+      tags:
+        - Execution Plans
+      parameters:
+        - name: limit
+          in: query
+          description: Maximum number of results
+          schema:
+            type: integer
+            default: 50
+        - name: offset
+          in: query
+          description: Number of results to skip
+          schema:
+            type: integer
+            default: 0
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  plans:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ExecutingPlan'
+                  totalCount:
+                    type: integer
+
+  /api/executionengine/plans/executing/{planExecutionId}:
+    get:
+      summary: Get specific executing plan
+      description: Retrieve details of a specific executing plan
+      tags:
+        - Execution Plans
+      parameters:
+        - name: planExecutionId
+          in: path
+          required: true
+          description: The unique identifier of the plan execution
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExecutingPlan'
+        '404':
+          description: Plan execution not found
+    delete:
+      summary: Cancel executing plan
+      description: Cancel a currently executing plan
+      tags:
+        - Execution Plans
+      parameters:
+        - name: planExecutionId
+          in: path
+          required: true
+          description: The unique identifier of the plan execution
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '204':
+          description: Plan cancelled successfully
+        '404':
+          description: Plan execution not found
+        '400':
+          description: Plan cannot be cancelled
+
+  /api/executionengine/plans/executing/{planExecutionId}/cancel:
+    post:
+      summary: Cancel executing plan
+      description: Request cancellation of a currently executing plan
+      tags:
+        - Execution Plans
+      parameters:
+        - name: planExecutionId
+          in: path
+          required: true
+          description: The unique identifier of the plan execution
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                reason:
+                  type: string
+                  description: Reason for cancellation
+                force:
+                  type: boolean
+                  description: Force cancellation even if plan is in critical state
+      responses:
+        '200':
+          description: Cancellation requested successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  cancellationId:
+                    type: string
+                    format: uuid
+                  status:
+                    type: string
+                    enum: [requested, in_progress, completed, failed]
+        '404':
+          description: Plan execution not found
+        '400':
+          description: Plan cannot be cancelled
+
+  /api/executionengine/manualExecution:
+    post:
+      summary: Execute plan manually
+      description: Start manual execution of a workflow plan
+      tags:
+        - Manual Execution
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - planId
+                - context
+              properties:
+                planId:
+                  type: string
+                  format: uuid
+                  description: ID of the plan to execute
+                context:
+                  type: object
+                  description: Execution context and parameters
+                priority:
+                  type: string
+                  enum: [low, normal, high, urgent]
+                  default: normal
+                  description: Execution priority
+                timeout:
+                  type: integer
+                  description: Execution timeout in seconds
+                parameters:
+                  type: object
+                  description: Plan-specific parameters
+      responses:
+        '202':
+          description: Execution started successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  executionId:
+                    type: string
+                    format: uuid
+                    description: Unique execution identifier
+                  status:
+                    type: string
+                    enum: [queued, running, completed, failed, cancelled]
+                  startedAt:
+                    type: string
+                    format: date-time
+        '400':
+          description: Invalid request
+        '404':
+          description: Plan not found
+        '401':
+          description: Unauthorized
+
+  /api/executionengine/visualmodeller/plans/executing/find:
+    post:
+      summary: Find executing visual modeller plans
+      description: Search for executing plans using visual modeller criteria
+      tags:
+        - Visual Modeller
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                criteria:
+                  type: object
+                  properties:
+                    planType:
+                      type: string
+                    status:
+                      type: array
+                      items:
+                        type: string
+                    contextId:
+                      type: string
+                      format: uuid
+                    createdAfter:
+                      type: string
+                      format: date-time
+                    createdBefore:
+                      type: string
+                      format: date-time
+                pagination:
+                  type: object
+                  properties:
+                    limit:
+                      type: integer
+                      default: 50
+                    offset:
+                      type: integer
+                      default: 0
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/VisualModellerPlan'
+                  totalCount:
+                    type: integer
+
+  /api/executionengine/visualmodeller/advisorIssues:
+    get:
+      summary: Get workflow advisor issues
+      description: Retrieve current issues and recommendations from the workflow advisor
+      tags:
+        - Visual Modeller
+      parameters:
+        - name: severity
+          in: query
+          description: Filter by issue severity
+          schema:
+            type: string
+            enum: [info, warning, error, critical]
+        - name: category
+          in: query
+          description: Filter by issue category
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AdvisorIssue'
+
+  /api/executionengine/triggers/{triggerId}/activate:
+    post:
+      summary: Activate trigger
+      description: Activate a specific execution trigger
+      tags:
+        - Triggers
+      parameters:
+        - name: triggerId
+          in: path
+          required: true
+          description: The unique identifier of the trigger
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Trigger activated successfully
+        '404':
+          description: Trigger not found
+        '400':
+          description: Trigger cannot be activated
+
+  /api/executionengine/triggers/forSharedo/{sharedoId}/toPhase/{phaseName}:
+    get:
+      summary: Get phase transition triggers
+      description: Get triggers available for transitioning a Sharedo to a specific phase
+      tags:
+        - Triggers
+      parameters:
+        - name: sharedoId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+        - name: phaseName
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PhaseTrigger'
+
+  /api/executionengine/export/triggers/{triggerId}:
+    get:
+      summary: Export trigger SQL
+      description: Export SQL scripts for a specific trigger
+      tags:
+        - Export
+      parameters:
+        - name: triggerId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: SQL export successful
+          content:
+            application/sql:
+              schema:
+                type: string
+                description: SQL script content
+
+  /api/executionengine/configuration/import:
+    post:
+      summary: Import configuration
+      description: Import execution engine configuration from legacy server
+      tags:
+        - Configuration
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                sourceUrl:
+                  type: string
+                  description: URL of the legacy server
+                credentials:
+                  type: object
+                  description: Authentication credentials
+                configTypes:
+                  type: array
+                  items:
+                    type: string
+                  description: Types of configuration to import
+      responses:
+        '202':
+          description: Import started successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  importId:
+                    type: string
+                    format: uuid
+                  status:
+                    type: string
+
+  /api/executionengine/report-error:
+    post:
+      summary: Report execution error
+      description: Report an error that occurred during plan execution
+      tags:
+        - Error Reporting
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - executionId
+                - error
+              properties:
+                executionId:
+                  type: string
+                  format: uuid
+                error:
+                  type: object
+                  properties:
+                    message:
+                      type: string
+                    stackTrace:
+                      type: string
+                    errorCode:
+                      type: string
+                context:
+                  type: object
+                  description: Additional error context
+      responses:
+        '201':
+          description: Error reported successfully
+        '400':
+          description: Invalid error report
+
+  /api/executionengine/{planType}/{planSystemName}/{planExecutionId}/complete:
+    post:
+      summary: Complete plan execution
+      description: Mark a plan execution as completed
+      tags:
+        - Plan Lifecycle
+      parameters:
+        - name: planType
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: planSystemName
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: planExecutionId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                result:
+                  type: object
+                  description: Execution result data
+                completionStatus:
+                  type: string
+                  enum: [success, failure, partial]
+      responses:
+        '200':
+          description: Plan marked as completed
+        '404':
+          description: Plan execution not found
+
+components:
+  schemas:
+    ExecutionPlan:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        description:
+          type: string
+        type:
+          type: string
+        version:
+          type: string
+        status:
+          type: string
+          enum: [active, inactive, deprecated]
+        created:
+          type: string
+          format: date-time
+        modified:
+          type: string
+          format: date-time
+        parameters:
+          type: object
+        configuration:
+          type: object
+
+    ExecutingPlan:
+      type: object
+      properties:
+        executionId:
+          type: string
+          format: uuid
+        planId:
+          type: string
+          format: uuid
+        planName:
+          type: string
+        status:
+          type: string
+          enum: [queued, running, paused, completed, failed, cancelled]
+        startedAt:
+          type: string
+          format: date-time
+        estimatedCompletion:
+          type: string
+          format: date-time
+        progress:
+          type: object
+          properties:
+            percentage:
+              type: integer
+              minimum: 0
+              maximum: 100
+            currentStep:
+              type: string
+            totalSteps:
+              type: integer
+        context:
+          type: object
+        priority:
+          type: string
+          enum: [low, normal, high, urgent]
+
+    VisualModellerPlan:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        type:
+          type: string
+        status:
+          type: string
+        contextId:
+          type: string
+          format: uuid
+        created:
+          type: string
+          format: date-time
+        lastActivity:
+          type: string
+          format: date-time
+        steps:
+          type: array
+          items:
+            type: object
+        metadata:
+          type: object
+
+    AdvisorIssue:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        severity:
+          type: string
+          enum: [info, warning, error, critical]
+        category:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        recommendation:
+          type: string
+        planId:
+          type: string
+          format: uuid
+        stepId:
+          type: string
+        detected:
+          type: string
+          format: date-time
+        resolved:
+          type: boolean
+
+    PhaseTrigger:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        description:
+          type: string
+        fromPhase:
+          type: string
+        toPhase:
+          type: string
+        conditions:
+          type: array
+          items:
+            type: object
+        actions:
+          type: array
+          items:
+            type: object
+        isActive:
+          type: boolean
+
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+security:
+  - bearerAuth: []
+
+tags:
+  - name: Execution Plans
+    description: Plan management and execution operations
+  - name: Manual Execution
+    description: Manual plan execution operations
+  - name: Visual Modeller
+    description: Visual workflow modeller operations
+  - name: Triggers
+    description: Execution trigger management
+  - name: Export
+    description: Configuration and data export
+  - name: Configuration
+    description: Execution engine configuration
+  - name: Error Reporting
+    description: Error reporting and tracking
+  - name: Plan Lifecycle
+    description: Plan lifecycle management

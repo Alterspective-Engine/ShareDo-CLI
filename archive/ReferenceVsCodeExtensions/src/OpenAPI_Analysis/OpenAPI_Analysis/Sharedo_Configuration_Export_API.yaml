@@ -1,0 +1,903 @@
+openapi: 3.0.3
+info:
+  title: Sharedo Configuration Export API
+  description: |
+    Comprehensive API for exporting and importing configuration data within the Sharedo platform.
+    This API provides multiple endpoints for configuration data export, job management, and progress tracking.
+    
+    ## Key Features
+    - Direct configuration export for analysis
+    - Job-based import/export processing with progress tracking
+    - Modeller import/export infrastructure
+    - Solution configuration management
+    - Budget structure export capabilities
+    - Comprehensive logging and monitoring
+    
+    ## Export Capabilities
+    - System configuration data
+    - Workflow definitions
+    - Budget structures
+    - Solution configurations
+    - Feature framework settings
+    - Case management configurations
+    
+  version: 7.8.2
+  contact:
+    name: Sharedo API Support
+    url: https://sharedo.com/support
+    email: api-support@sharedo.com
+  license:
+    name: Proprietary
+    url: https://sharedo.com/license
+
+servers:
+  - url: https://app.sharedo.com
+    description: Production server
+  - url: https://staging.sharedo.com
+    description: Staging server
+  - url: http://localhost:5000
+    description: Development server
+
+security:
+  - bearerAuth: []
+
+paths:
+  /api/configuration/export:
+    get:
+      summary: Export System Configuration
+      description: |
+        Direct export of the current Sharedo system configuration.
+        Downloads a comprehensive configuration file containing system settings,
+        workflows, forms, and other configuration data for analysis.
+      operationId: exportSystemConfiguration
+      tags:
+        - Configuration Export
+      responses:
+        '200':
+          description: Configuration data exported successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConfigurationExportData'
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+                description: Binary configuration export file
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /api/modeller/importexport/export/package:
+    post:
+      summary: Create Export Package Job
+      description: |
+        Creates a new export job for configuration data using the modeller import/export infrastructure.
+        This endpoint supports job-based processing for large configuration exports with progress tracking.
+      operationId: createExportPackageJob
+      tags:
+        - Modeller Import/Export
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExportJobRequest'
+      responses:
+        '202':
+          description: Export job created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExportJobResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /api/modeller/importexport/import/package:
+    post:
+      summary: Create Import Package Job
+      description: |
+        Creates a new import job for configuration data using the modeller import/export infrastructure.
+        Supports uploading and importing configuration packages with validation and dependency checking.
+      operationId: createImportPackageJob
+      tags:
+        - Modeller Import/Export
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                package:
+                  type: string
+                  format: binary
+                  description: Configuration package file to import
+                options:
+                  $ref: '#/components/schemas/ImportOptions'
+      responses:
+        '202':
+          description: Import job created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ImportJobResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /api/modeller/importexport/{mode}/package/{jobId}/status:
+    get:
+      summary: Get Import/Export Job Status
+      description: |
+        Retrieves the current status of an import or export job.
+        Provides progress information, completion status, and error details if applicable.
+      operationId: getJobStatus
+      tags:
+        - Job Management
+      parameters:
+        - name: mode
+          in: path
+          required: true
+          schema:
+            type: string
+            enum: [export, import]
+          description: The job mode (export or import)
+        - name: jobId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: Unique identifier for the job
+      responses:
+        '200':
+          description: Job status retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobStatus'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /api/modeller/importexport/{mode}/package/{jobId}/step/{stepId}/log:
+    get:
+      summary: Get Job Step Logs
+      description: |
+        Retrieves detailed logs for a specific step in an import/export job.
+        Useful for debugging and monitoring the progress of configuration operations.
+      operationId: getJobStepLogs
+      tags:
+        - Job Management
+      parameters:
+        - name: mode
+          in: path
+          required: true
+          schema:
+            type: string
+            enum: [export, import]
+          description: The job mode (export or import)
+        - name: jobId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: Unique identifier for the job
+        - name: stepId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Identifier for the job step
+      responses:
+        '200':
+          description: Job step logs retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobStepLogs'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    delete:
+      summary: Clear Job Step Logs
+      description: Clears the logs for a specific step in an import/export job
+      operationId: clearJobStepLogs
+      tags:
+        - Job Management
+      parameters:
+        - name: mode
+          in: path
+          required: true
+          schema:
+            type: string
+            enum: [export, import]
+          description: The job mode (export or import)
+        - name: jobId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: Unique identifier for the job
+        - name: stepId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Identifier for the job step
+      responses:
+        '204':
+          description: Job step logs cleared successfully
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /api/modeller/importexport/providers:
+    get:
+      summary: List Configuration Import/Export Providers
+      description: |
+        Retrieves a list of available configuration import/export providers.
+        Each provider handles specific types of configuration data (budgets, workflows, etc.).
+      operationId: listProviders
+      tags:
+        - Providers
+      responses:
+        '200':
+          description: Providers retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ConfigurationProvider'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /api/modeller/importexport/export/sets:
+    get:
+      summary: Get Available Export Sets
+      description: |
+        Retrieves available configuration export sets that can be exported.
+        Export sets group related configuration items for organized export operations.
+      operationId: getExportSets
+      tags:
+        - Export Sets
+      responses:
+        '200':
+          description: Export sets retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ExportSet'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /api/featureFramework/solution-import-export/configuration:
+    get:
+      summary: Get Solution Import/Export Configuration
+      description: |
+        Retrieves configuration settings for the solution import/export feature framework.
+        Contains settings for solution-level configuration export and import operations.
+      operationId: getSolutionImportExportConfig
+      tags:
+        - Solution Configuration
+      responses:
+        '200':
+          description: Solution import/export configuration retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SolutionImportExportConfig'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /api/finance/budgets/structure/export:
+    get:
+      summary: Export Budget Structure Configuration
+      description: |
+        Exports budget structure configuration data including budget hierarchies,
+        categories, and financial configuration settings.
+      operationId: exportBudgetStructure
+      tags:
+        - Financial Configuration
+      parameters:
+        - name: includeData
+          in: query
+          schema:
+            type: boolean
+            default: false
+          description: Whether to include actual budget data or just structure
+        - name: format
+          in: query
+          schema:
+            type: string
+            enum: [json, csv, excel]
+            default: json
+          description: Export format
+      responses:
+        '200':
+          description: Budget structure exported successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BudgetStructureExport'
+            text/csv:
+              schema:
+                type: string
+                format: binary
+            application/vnd.openxmlformats-officedocument.spreadsheetml.sheet:
+              schema:
+                type: string
+                format: binary
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT token for authentication
+
+  schemas:
+    ConfigurationExportData:
+      type: object
+      properties:
+        metadata:
+          $ref: '#/components/schemas/ExportMetadata'
+        systemConfiguration:
+          type: object
+          description: System-level configuration settings
+        workflows:
+          type: array
+          items:
+            $ref: '#/components/schemas/WorkflowConfiguration'
+        forms:
+          type: array
+          items:
+            $ref: '#/components/schemas/FormConfiguration'
+        participants:
+          type: array
+          items:
+            $ref: '#/components/schemas/ParticipantConfiguration'
+        security:
+          $ref: '#/components/schemas/SecurityConfiguration'
+        integrations:
+          type: array
+          items:
+            $ref: '#/components/schemas/IntegrationConfiguration'
+
+    ExportMetadata:
+      type: object
+      properties:
+        exportDate:
+          type: string
+          format: date-time
+        exportedBy:
+          type: string
+        version:
+          type: string
+        includesData:
+          type: boolean
+        exportType:
+          type: string
+          enum: [full, partial, incremental]
+
+    ExportJobRequest:
+      type: object
+      required:
+        - exportType
+        - providers
+      properties:
+        exportType:
+          type: string
+          enum: [full, partial, selective]
+          description: Type of export to perform
+        providers:
+          type: array
+          items:
+            type: string
+          description: List of configuration providers to include in export
+        includeData:
+          type: boolean
+          default: false
+          description: Whether to include actual data or just configuration structure
+        exportSets:
+          type: array
+          items:
+            type: string
+          description: Specific export sets to include
+        options:
+          $ref: '#/components/schemas/ExportOptions'
+
+    ExportOptions:
+      type: object
+      properties:
+        compressionEnabled:
+          type: boolean
+          default: true
+        encryptionEnabled:
+          type: boolean
+          default: false
+        includeMetadata:
+          type: boolean
+          default: true
+        validateDependencies:
+          type: boolean
+          default: true
+
+    ImportOptions:
+      type: object
+      properties:
+        overwriteExisting:
+          type: boolean
+          default: false
+        validateBeforeImport:
+          type: boolean
+          default: true
+        backupBeforeImport:
+          type: boolean
+          default: true
+        mergeStrategy:
+          type: string
+          enum: [overwrite, merge, skip]
+          default: merge
+
+    ExportJobResponse:
+      type: object
+      properties:
+        jobId:
+          type: string
+          format: uuid
+        status:
+          type: string
+          enum: [created, queued, running, completed, failed]
+        estimatedDuration:
+          type: integer
+          description: Estimated duration in seconds
+        createdAt:
+          type: string
+          format: date-time
+
+    ImportJobResponse:
+      type: object
+      properties:
+        jobId:
+          type: string
+          format: uuid
+        status:
+          type: string
+          enum: [created, queued, validating, running, completed, failed]
+        validationResults:
+          $ref: '#/components/schemas/ValidationResults'
+        createdAt:
+          type: string
+          format: date-time
+
+    JobStatus:
+      type: object
+      properties:
+        jobId:
+          type: string
+          format: uuid
+        status:
+          type: string
+          enum: [created, queued, running, completed, failed, cancelled]
+        progress:
+          type: object
+          properties:
+            currentStep:
+              type: string
+            totalSteps:
+              type: integer
+            completedSteps:
+              type: integer
+            percentComplete:
+              type: number
+              format: float
+              minimum: 0
+              maximum: 100
+        startedAt:
+          type: string
+          format: date-time
+        completedAt:
+          type: string
+          format: date-time
+        duration:
+          type: integer
+          description: Duration in seconds
+        results:
+          $ref: '#/components/schemas/JobResults'
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/JobError'
+
+    JobResults:
+      type: object
+      properties:
+        exportedItems:
+          type: integer
+        totalSize:
+          type: integer
+          description: Size in bytes
+        downloadUrl:
+          type: string
+          format: uri
+        expiresAt:
+          type: string
+          format: date-time
+
+    JobError:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+        details:
+          type: object
+        timestamp:
+          type: string
+          format: date-time
+
+    JobStepLogs:
+      type: object
+      properties:
+        stepId:
+          type: string
+        stepName:
+          type: string
+        logs:
+          type: array
+          items:
+            $ref: '#/components/schemas/LogEntry'
+        totalEntries:
+          type: integer
+
+    LogEntry:
+      type: object
+      properties:
+        timestamp:
+          type: string
+          format: date-time
+        level:
+          type: string
+          enum: [debug, info, warning, error]
+        message:
+          type: string
+        details:
+          type: object
+
+    ConfigurationProvider:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        supportedOperations:
+          type: array
+          items:
+            type: string
+            enum: [export, import, validate]
+        configurationTypes:
+          type: array
+          items:
+            type: string
+
+    ExportSet:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        itemCount:
+          type: integer
+        providers:
+          type: array
+          items:
+            type: string
+        dependencies:
+          type: array
+          items:
+            type: string
+
+    SolutionImportExportConfig:
+      type: object
+      properties:
+        enabled:
+          type: boolean
+        defaultExportFormat:
+          type: string
+        maxExportSize:
+          type: integer
+        retentionPeriod:
+          type: integer
+          description: Retention period in days
+        allowedProviders:
+          type: array
+          items:
+            type: string
+
+    BudgetStructureExport:
+      type: object
+      properties:
+        metadata:
+          $ref: '#/components/schemas/ExportMetadata'
+        budgetHierarchy:
+          type: array
+          items:
+            $ref: '#/components/schemas/BudgetNode'
+        categories:
+          type: array
+          items:
+            $ref: '#/components/schemas/BudgetCategory'
+        rules:
+          type: array
+          items:
+            $ref: '#/components/schemas/BudgetRule'
+
+    BudgetNode:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        parentId:
+          type: string
+        level:
+          type: integer
+        configuration:
+          type: object
+
+    BudgetCategory:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        type:
+          type: string
+        settings:
+          type: object
+
+    BudgetRule:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        condition:
+          type: string
+        action:
+          type: string
+
+    WorkflowConfiguration:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        definition:
+          type: object
+        settings:
+          type: object
+
+    FormConfiguration:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        schema:
+          type: object
+        configuration:
+          type: object
+
+    ParticipantConfiguration:
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+        settings:
+          type: object
+
+    SecurityConfiguration:
+      type: object
+      properties:
+        policies:
+          type: array
+          items:
+            type: object
+        roles:
+          type: array
+          items:
+            type: object
+        permissions:
+          type: array
+          items:
+            type: object
+
+    IntegrationConfiguration:
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+        settings:
+          type: object
+        endpoints:
+          type: array
+          items:
+            type: object
+
+    ValidationResults:
+      type: object
+      properties:
+        isValid:
+          type: boolean
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/ValidationError'
+        warnings:
+          type: array
+          items:
+            $ref: '#/components/schemas/ValidationWarning'
+
+    ValidationError:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+        field:
+          type: string
+        severity:
+          type: string
+          enum: [error, critical]
+
+    ValidationWarning:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+        field:
+          type: string
+
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+        details:
+          type: object
+        timestamp:
+          type: string
+          format: date-time
+
+  responses:
+    BadRequest:
+      description: Bad request - invalid parameters or request body
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+
+    Unauthorized:
+      description: Unauthorized - authentication required
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+
+    Forbidden:
+      description: Forbidden - insufficient permissions
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+
+    InternalServerError:
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+
+tags:
+  - name: Configuration Export
+    description: Direct configuration export operations
+  - name: Modeller Import/Export
+    description: Job-based import/export using modeller infrastructure
+  - name: Job Management
+    description: Job status monitoring and log management
+  - name: Providers
+    description: Configuration import/export provider management
+  - name: Export Sets
+    description: Configuration export set management
+  - name: Solution Configuration
+    description: Solution-level configuration management
+  - name: Financial Configuration
+    description: Budget and financial configuration export
+
+externalDocs:
+  description: Sharedo Platform Documentation
+  url: https://docs.sharedo.com

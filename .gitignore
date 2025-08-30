@@ -1,3 +1,11 @@
+# Build outputs
+dist/
+*/dist/
+packages/*/dist/
+*.tsbuildinfo
+.tsbuildinfo
+
+# Old lib folder (archived)
 lib/
 
 # Logs
@@ -104,3 +112,27 @@ dist
 
 # TernJS port file
 .tern-port
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Worktree markers
+.claude-context
+
+# Package manager lock files (we use npm)
+yarn.lock
+pnpm-lock.yaml
+
+# Temporary directories
+temp/
+tmp/
+.tmp/

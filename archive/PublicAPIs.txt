@@ -1,0 +1,1434 @@
+fetch("https://demo-aus.sharedo.tech/api/public/accountAdjustments/versions?_=1756381657078", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/accountAdjustments/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/attributes/versions?_=1756381657079", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/attributes/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/workitem-audit/versions?_=1756381657080", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/workitem-audit/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/Budgets/versions?_=1756381657081", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/Budgets/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/ChartOfAccounts/versions?_=1756381657082", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/ChartOfAccounts/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/chronology/versions?_=1756381657083", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/chronology/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/comments/versions?_=1756381657084", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/comments/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/dms/versions?_=1756381657085", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/dms/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/emails/versions?_=1756381657086", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v2/emails/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/emails/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/features/versions?_=1756381657087", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v2/features/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/genericExport/versions?_=1756381657088", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/genericExport/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/Invoice%20Payments/versions?_=1756381657089", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/Invoice%20Payments/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/Invoices/versions?_=1756381657090", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/Invoices/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/locations/versions?_=1756381657091", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v2/locations/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/my/versions?_=1756381657092", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v2/my/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/my/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/notifications/versions?_=1756381657093", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/notifications/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/Offers/versions?_=1756381657094", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/Offers/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/optionSets/versions?_=1756381657095", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/optionSets/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/organisation/versions?_=1756381657096", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v2/organisation/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/organisation/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/participants/versions?_=1756381657097", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v2/participants/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/participants/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/PaymentRequests/versions?_=1756381657098", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/PaymentRequests/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/people/versions?_=1756381657099", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v2/people/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/people/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/phase/versions?_=1756381657100", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/phase/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/documents/versions?_=1756381657101", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/documents/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/settings/versions?_=1756381657102", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v2/settings/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/settings/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/smartVariables/versions?_=1756381657103", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/smartVariables/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/time/versions?_=1756381657104", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v2/time/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/timezones/versions?_=1756381657105", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/timezones/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/types/versions?_=1756381657106", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v2/types/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/users/versions?_=1756381657107", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v2/users/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/wikis/versions?_=1756381657108", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/wikis/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/workItem/versions?_=1756381657109", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/workItem/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/findByQuery/versions?_=1756381657110", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byIsImtpZCI6Ijc0U0JwVFpIYjZaR1BkLWFqa0EzejVFOFB2byJ9.eyJpc3MiOiJodHRwczovL2RlbW8tYXVzLWlkZW50aXR5LnNoYXJlZG8udGVjaCIsImF1ZCI6Imh0dHBzOi8vZGVtby1hdXMtaWRlbnRpdHkuc2hhcmVkby50ZWNoL3Jlc291cmNlcyIsImV4cCI6MTc1NjM4MjQzNSwibmJmIjoxNzU2MzgxNTM1LCJjbGllbnRfaWQiOiJzaGFyZWRvIiwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCJwcm9maWxlIiwic2hhcmVkbyJdLCJzdWIiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiYXV0aF90aW1lIjoxNzU2MzgwNDE1LCJpZHAiOiJBbHRlcnNwZWN0aXZlQWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaWdvckBhbHRlcnNwZWN0aXZlLmNvbS5hdSIsIm5hbWUiOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1Iiwic2hhcmVkby91c2VyaWQiOiI3NWFiN2M3NC1lMzc3LTRkZDUtYTMwMC05MDY2ZTVmODIyNDUiLCJ1cG4iOiJpZ29yQGFsdGVyc3BlY3RpdmUuY29tLmF1IiwiZGVidWcvaXNzdWVkQXQiOiI4LzI4LzIwMjUgMTE6NDU6MzUgQU0iLCJhbXIiOlsiZXh0ZXJuYWwiXX0.hSJocLdluZH64TJQEnDps7u59fXFnJSAV_YvmGnBJ-sgfOOLFpa-6aa_PQz7S4jjaphiN3Bq90WB1LLTzWcwCxdLxzGHxXcC5chQ_c57wyjKoY21XJxUm0Cx-KosN20GMtOlMH0ocfyQ5Dmt0wdyVPtzqQjSZYoGJRE4xN2xYyrJOJxM2cbS5yELqMJFx0rWbkpxQ0bBwYOIIbquxCnUYcLaDB2mFgaM_rqFDOGLe0YCJNLhyIGM4LTvENwl9mkWoNzSCBT4Ucgi0bl6XBAoPfqsW9lxG5ATdlhO8cC2lKMV6k6_fSIhgR_VtkuQ0CtVivnd4wjY9xHFFer2dvdyLw",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://demo-aus.sharedo.tech/api/public/v1/findByQuery/swagger.json", {
+  "headers": {
+    "accept": "application/json,*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+});

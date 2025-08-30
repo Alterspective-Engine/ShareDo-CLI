@@ -1,0 +1,954 @@
+{
+  "name": "sharedo-vscode-extension",
+  "displayName": "ShareDo VSCode Extension",
+  "publisher": "ShareDo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Alter-Igor/sharedo-vscode-extension"
+  },
+  "description": "",
+  "version": "0.8.2",
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "sharedo.setupWizard",
+        "title": "Sharedo: Setup Wizard",
+        "category": "ShareDo",
+        "icon": "$(gear)"
+      },
+      {
+        "command": "sharedo.compareWorkItemToOthers",
+        "title": "Sharedo: Compare WorkItem To Others",
+        "icon": {
+          "light": "resources/colorfulIcons/compare_light.svg",
+          "dark": "resources/colorfulIcons/compare_dark.svg"
+        }
+      },
+      {
+        "command": "sharedo.continueDeploy",
+        "title": "Sharedo: Continues Deploy IDE files on change"
+      },
+      {
+        "command": "sharedo.connect",
+        "title": "Sharedo: Connect to Sharedo Server"
+      },
+      {
+        "command": "sharedo.generateSettingsJson",
+        "title": "Sharedo: Generate Connection String"
+      },
+      {
+        "command": "sharedo.execute",
+        "title": "Sharedo: Execute"
+      },
+      {
+        "command": "sharedo.generateTemplatedFolder",
+        "title": "Sharedo: Generate Scafolding components"
+      },
+      {
+        "command": "sharedo.removeServer",
+        "title": "Sharedo: Remove Sharedo Server"
+      },
+      {
+        "command": "sharedo.publish",
+        "title": "Sharedo: Publish"
+      },
+      {
+        "command": "sharedo.addToDeploy",
+        "title": "Sharedo: Add to Deploy"
+      },
+      {
+        "command": "sharedo.addToCompare",
+        "title": "Sharedo: Add to Compare"
+      },
+      {
+        "command": "sharedo.removeFromCompare",
+        "title": "Sharedo: Remove from Compare"
+      },
+      {
+        "command": "sharedo.findImplementations",
+        "title": "Sharedo: Find Implementations"
+      },
+      {
+        "command": "sharedo.removeFromDeploy",
+        "title": "Sharedo: Remove from Deploy"
+      },
+      {
+        "command": "sharedo.download",
+        "title": "Sharedo: Download File"
+      },
+      {
+        "command": "sharedo.downloadFolder",
+        "title": "Sharedo: Download Folder"
+      },
+      {
+        "command": "sharedo.retryError",
+        "title": "Sharedo: Retry Error"
+      },
+      {
+        "command": "sharedo.addAsFavorite",
+        "title": "Sharedo: Add as Favorite"
+      },
+      {
+        "command": "sharedo.removeAsFavorite",
+        "title": "Sharedo: Remove as Favorite"
+      },
+      {
+        "command": "sharedo.openWorkTypeManagement",
+        "title": "Sharedo: Open Work Type Management"
+      },
+      {
+        "command": "sharedo.startWorkflow",
+        "title": "Sharedo: Start Workflow"
+      },
+      {
+        "command": "sharedo.downloadWorkflow",
+        "title": "Sharedo: Download Workflow"
+      },
+      {
+        "command": "sharedo.compairWorkflowToLocal",
+        "title": "Sharedo: Compair Workflow To Local"
+      },
+      {
+        "command": "sharedo.compairToLocal",
+        "title": "Sharedo: Compair To Local"
+      },
+      {
+        "command": "sharedo.setWorkflowDataFields",
+        "title": "Sharedo: Set Workflow Data Fields"
+      },
+      {
+        "command": "sharedo.refresh",
+        "title": "Sharedo: Refresh"
+      },
+      {
+        "command": "sharedo.refreshAll",
+        "title": "Sharedo: Refresh All"
+      },
+      {
+        "command": "sharedo.showObject",
+        "title": "Sharedo: Show Object"
+      },
+      {
+        "command": "sharedo.grantCreatePermissionToDerivedWorkTypes",
+        "title": "Sharedo: Grant Permission to ALL Derived Work Types"
+      },
+      {
+        "command": "sharedo.removeCreatePermissionFromCurrentAndDerivedWorkTypes",
+        "title": "Sharedo: Remove Create Permission from ALL Derived Work Types"
+      },
+      {
+        "command": "sharedo.removeCreatePermissionCurrentWorkTypes",
+        "title": "Sharedo: Remove Create Permission from this Work Type"
+      },
+      {
+        "command": "sharedo.form.create",
+        "title": "ShareDo: Create New Form",
+        "category": "Form Builder"
+      },
+      {
+        "command": "sharedo.form.addField",
+        "title": "ShareDo: Add Field to Form",
+        "category": "Form Builder"
+      },
+      {
+        "command": "sharedo.form.preview",
+        "title": "ShareDo: Preview Form",
+        "category": "Form Builder"
+      },
+      {
+        "command": "sharedo.form.validate",
+        "title": "ShareDo: Validate Form",
+        "category": "Form Builder"
+      },
+      {
+        "command": "sharedo.form.clone",
+        "title": "ShareDo: Clone Form",
+        "category": "Form Builder"
+      },
+      {
+        "command": "sharedo.form.deleteField",
+        "title": "ShareDo: Delete Field",
+        "category": "Form Builder"
+      },
+      {
+        "command": "sharedo.form.moveFieldUp",
+        "title": "ShareDo: Move Field Up",
+        "category": "Form Builder"
+      },
+      {
+        "command": "sharedo.form.moveFieldDown",
+        "title": "ShareDo: Move Field Down",
+        "category": "Form Builder"
+      },
+      {
+        "command": "sharedo.form.export",
+        "title": "ShareDo: Export Form",
+        "category": "Form Builder"
+      },
+      {
+        "command": "sharedo.form.import",
+        "title": "ShareDo: Import Form",
+        "category": "Form Builder"
+      },
+      {
+        "command": "sharedo.form.viewJSON",
+        "title": "ShareDo: View Form JSON",
+        "category": "Form Builder"
+      },
+      {
+        "command": "sharedo.form.refresh",
+        "title": "ShareDo: Refresh Forms",
+        "category": "Form Builder"
+      },
+      {
+        "command": "sharedo.form.toggleRequired",
+        "title": "ShareDo: Toggle Field Required",
+        "category": "Form Builder"
+      },
+      {
+        "command": "sharedo.form.editField",
+        "title": "ShareDo: Edit Field Properties",
+        "category": "Form Builder"
+      },
+      {
+        "command": "sharedo.copyPermissionsFromTypeToDerivedTypes",
+        "title": "Sharedo: Copy Participant Permission to ALL Derived Work Types"
+      },
+      {
+        "command": "sharedo.findOptionSetOptionById",
+        "title": "Sharedo: Find Option Set Option By Id"
+      },
+      {
+        "command": "sharedo.startManualExecution",
+        "title": "Sharedo: Start Manual Execution",
+        "category": "ShareDo Execution",
+        "icon": "$(play)"
+      },
+      {
+        "command": "sharedo.cancelExecution",
+        "title": "Sharedo: Cancel Execution",
+        "category": "ShareDo Execution",
+        "icon": "$(stop)"
+      },
+      {
+        "command": "sharedo.showExecutionDetails",
+        "title": "Sharedo: Show Execution Details",
+        "category": "ShareDo Execution",
+        "icon": "$(info)"
+      },
+      {
+        "command": "sharedo.refreshExecutionMonitoring",
+        "title": "Sharedo: Refresh Execution Monitoring",
+        "category": "ShareDo Execution",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "sharedo.showAdvisorIssues",
+        "title": "Sharedo: Show Advisor Issues",
+        "category": "ShareDo Execution",
+        "icon": "$(warning)"
+      },
+      {
+        "command": "sharedo.exportExecutionStatistics",
+        "title": "Sharedo: Export Execution Statistics",
+        "category": "ShareDo Execution",
+        "icon": "$(export)"
+      },
+      {
+        "command": "sharedo.downloadWorkflowCode",
+        "title": "Sharedo: Download Workflow Code",
+        "category": "ShareDo Execution",
+        "icon": "$(cloud-download)"
+      },
+      {
+        "command": "sharedo.downloadAllExecutingWorkflows",
+        "title": "Sharedo: Download All Executing Workflows",
+        "category": "ShareDo Execution",
+        "icon": "$(cloud-download)"
+      },
+      {
+        "command": "sharedo.showWorkflowCode",
+        "title": "Sharedo: Show Workflow Code",
+        "category": "ShareDo Execution",
+        "icon": "$(code)"
+      },
+      {
+        "command": "sharedo.testTreeProviderArchitecture",
+        "title": "Sharedo: Test TreeProvider Architecture",
+        "category": "ShareDo Development",
+        "icon": "$(debug-alt)"
+      },
+      {
+        "command": "sharedo.diagnosticTreeProvider",
+        "title": "Sharedo: Diagnostic TreeProvider",
+        "category": "ShareDo Development",
+        "icon": "$(search)"
+      },
+      {
+        "command": "sharedo.workflow.download",
+        "title": "Download Workflow",
+        "category": "ShareDo Workflows",
+        "icon": "$(cloud-download)"
+      },
+      {
+        "command": "sharedo.workflow.preview",
+        "title": "Preview Workflow",
+        "category": "ShareDo Workflows",
+        "icon": "$(eye)"
+      },
+      {
+        "command": "sharedo.workflow.validate",
+        "title": "Validate Workflow",
+        "category": "ShareDo Workflows",
+        "icon": "$(check)"
+      },
+      {
+        "command": "sharedo.workflow.publish",
+        "title": "Publish Workflow",
+        "category": "ShareDo Workflows",
+        "icon": "$(cloud-upload)"
+      },
+      {
+        "command": "sharedo.workflow.compareWithServer",
+        "title": "Compare with Server",
+        "category": "ShareDo Workflows",
+        "icon": "$(diff)"
+      },
+      {
+        "command": "sharedo.workflow.compareAcrossServers",
+        "title": "Compare Across Servers",
+        "category": "ShareDo Workflows",
+        "icon": "$(git-compare)"
+      },
+      {
+        "command": "sharedo.workflow.batchDownload",
+        "title": "Batch Download Workflows",
+        "category": "ShareDo Workflows",
+        "icon": "$(cloud-download)"
+      },
+      {
+        "command": "sharedo.workflow.search",
+        "title": "Search Workflows",
+        "category": "ShareDo Workflows",
+        "icon": "$(search)"
+      },
+      {
+        "command": "sharedo.workflow.exportDocumentation",
+        "title": "Export as Documentation",
+        "category": "ShareDo Workflows",
+        "icon": "$(book)"
+      },
+      {
+        "command": "sharedo.workflow.create",
+        "title": "Create New Workflow",
+        "category": "ShareDo Workflows",
+        "icon": "$(add)"
+      },
+      {
+        "command": "sharedo.workflow.list",
+        "title": "Show Workflow List",
+        "category": "ShareDo Workflows",
+        "icon": "$(list-unordered)"
+      },
+      {
+        "command": "sharedo.cache.resetServer",
+        "title": "Reset Server Cache",
+        "category": "ShareDo Cache",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "sharedo.cache.resetAll",
+        "title": "Reset All Servers Cache",
+        "category": "ShareDo Cache",
+        "icon": "$(sync)"
+      },
+      {
+        "command": "sharedo.cache.configure",
+        "title": "Configure Cache Settings",
+        "category": "ShareDo Cache",
+        "icon": "$(settings-gear)"
+      },
+      {
+        "command": "sharedo.cache.status",
+        "title": "Show Cache Status",
+        "category": "ShareDo Cache",
+        "icon": "$(info)"
+      },
+      {
+        "command": "sharedo.hld.generate",
+        "title": "Generate HLD Document",
+        "category": "ShareDo HLD",
+        "icon": "$(file-text)"
+      },
+      {
+        "command": "sharedo.hld.generateBatch",
+        "title": "Generate Batch HLD Documents",
+        "category": "ShareDo HLD",
+        "icon": "$(files)"
+      },
+      {
+        "command": "sharedo.hld.generateWithTemplate",
+        "title": "Generate HLD with Template",
+        "category": "ShareDo HLD",
+        "icon": "$(file-code)"
+      },
+      {
+        "command": "sharedo.hld.preview",
+        "title": "Preview HLD Document",
+        "category": "ShareDo HLD",
+        "icon": "$(eye)"
+      },
+      {
+        "command": "sharedo.hld.clearCache",
+        "title": "Clear HLD Cache",
+        "category": "ShareDo HLD",
+        "icon": "$(trash)"
+      },
+      {
+        "command": "sharedo.hld.showCacheStatus",
+        "title": "Show HLD Cache Status",
+        "category": "ShareDo HLD",
+        "icon": "$(database)"
+      },
+      {
+        "command": "sharedo.hld.showPerformanceReport",
+        "title": "Show HLD Performance Report",
+        "category": "ShareDo HLD",
+        "icon": "$(graph)"
+      },
+      {
+        "command": "sharedo.hld.clearPerformanceMetrics",
+        "title": "Clear HLD Performance Metrics",
+        "category": "ShareDo HLD",
+        "icon": "$(clear-all)"
+      },
+      {
+        "command": "sharedo.hld.previewWithPlaywright",
+        "title": "Preview HLD with Playwright Export",
+        "category": "ShareDo HLD",
+        "icon": "$(browser)"
+      },
+      {
+        "command": "sharedo.auth.clearServerCache",
+        "title": "Clear Server Authentication Cache",
+        "category": "ShareDo Authentication",
+        "icon": "$(trash)"
+      },
+      {
+        "command": "sharedo.auth.clearAllCaches",
+        "title": "Clear All Authentication Caches",
+        "category": "ShareDo Authentication",
+        "icon": "$(clear-all)"
+      },
+      {
+        "command": "sharedo.auth.test",
+        "title": "Test Authentication",
+        "category": "ShareDo Authentication",
+        "icon": "$(check)"
+      },
+      {
+        "command": "sharedo.auth.status",
+        "title": "Show Authentication Status",
+        "category": "ShareDo Authentication",
+        "icon": "$(info)"
+      },
+      {
+        "command": "sharedo.generateConfigurableHLD",
+        "title": "Generate Stakeholder-Specific HLD",
+        "category": "ShareDo HLD",
+        "icon": "$(file-text)"
+      },
+      {
+        "command": "sharedo.generateBusinessAnalystHLD",
+        "title": "Generate Business Analyst HLD",
+        "category": "ShareDo HLD",
+        "icon": "$(briefcase)"
+      },
+      {
+        "command": "sharedo.generateSystemAdminHLD",
+        "title": "Generate System Admin HLD",
+        "category": "ShareDo HLD",
+        "icon": "$(server)"
+      },
+      {
+        "command": "sharedo.generateSupportConsultantHLD",
+        "title": "Generate Support Consultant HLD",
+        "category": "ShareDo HLD",
+        "icon": "$(tools)"
+      },
+      {
+        "command": "sharedo.generateTrainerHLD",
+        "title": "Generate Trainer HLD",
+        "category": "ShareDo HLD",
+        "icon": "$(mortar-board)"
+      },
+      {
+        "command": "sharedo.generateAllCheatSheets",
+        "title": "Generate All Cheat Sheets",
+        "category": "ShareDo HLD",
+        "icon": "$(checklist)"
+      },
+      {
+        "command": "sharedo.generateLegalAdminCheatSheet",
+        "title": "Generate Legal Admin Cheat Sheet",
+        "category": "ShareDo HLD",
+        "icon": "$(note)"
+      },
+      {
+        "command": "sharedo.generateLawyerCheatSheet",
+        "title": "Generate Lawyer Cheat Sheet",
+        "category": "ShareDo HLD",
+        "icon": "$(law)"
+      },
+      {
+        "command": "sharedo.generateManagerCheatSheet",
+        "title": "Generate Manager Cheat Sheet",
+        "category": "ShareDo HLD",
+        "icon": "$(organization)"
+      },
+      {
+        "command": "sharedo.generateSysAdminCheatSheet",
+        "title": "Generate SysAdmin Cheat Sheet",
+        "category": "ShareDo HLD",
+        "icon": "$(terminal)"
+      },
+      {
+        "command": "sharedo.generateFullDocumentationSuite",
+        "title": "Generate Full Documentation Suite",
+        "category": "ShareDo HLD",
+        "icon": "$(library)"
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "id": "SharedoServers",
+          "name": "ShareDo Servers",
+          "contextualTitle": "ShareDo Explorer"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "SharedoServers",
+        "contents": "No Sharedo Servers found [learn more](https://www.sharedo.co.uk/).\n[Add Sharedo Servers](command:sharedo.connect)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "sharedo.refreshAll",
+          "when": "view == SharedoServers",
+          "group": "navigation"
+        },
+        {
+          "command": "sharedo.testTreeProviderArchitecture",
+          "when": "view == SharedoServers",
+          "group": "navigation@2"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "sharedo.publish",
+          "group": "Sharedo"
+        },
+        {
+          "command": "sharedo.generateTemplatedFolder",
+          "group": "Sharedo"
+        },
+        {
+          "command": "sharedo.workflow.preview",
+          "when": "resourceExtname == .json && resourceFilename =~ /.*workflow.*/i",
+          "group": "Sharedo Workflows"
+        },
+        {
+          "command": "sharedo.workflow.validate",
+          "when": "resourceExtname == .json && resourceFilename =~ /.*workflow.*/i",
+          "group": "Sharedo Workflows"
+        },
+        {
+          "command": "sharedo.workflow.publish",
+          "when": "resourceExtname == .json && resourceFilename =~ /.*workflow.*/i",
+          "group": "Sharedo Workflows"
+        },
+        {
+          "command": "sharedo.workflow.compareWithServer",
+          "when": "resourceExtname == .json && resourceFilename =~ /.*workflow.*/i",
+          "group": "Sharedo Workflows"
+        },
+        {
+          "command": "sharedo.workflow.exportDocumentation",
+          "when": "resourceExtname == .json && resourceFilename =~ /.*workflow.*/i",
+          "group": "Sharedo Workflows"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "sharedo.compareWorkItemToOthers",
+          "when": "view == SharedoServers && (viewItem == WorkType || viewItem == Workflow || viewItem == Folder || viewItem == Form || viewItem == Object || viewItem == workitem)",
+          "group": "compare"
+        },
+        {
+          "command": "sharedo.retryError",
+          "when": "view == SharedoServer && viewItem == Error",
+          "group": "1"
+        },
+        {
+          "command": "sharedo.refresh",
+          "when": "view == SharedoServers && viewItem == Folder",
+          "group": "navigation"
+        },
+        {
+          "command": "sharedo.refresh",
+          "when": "view == SharedoServers && viewItem == Connectors",
+          "group": "navigation"
+        },
+        {
+          "command": "sharedo.refresh",
+          "when": "view == SharedoServers && viewItem == Server || viewItem == DeployToServer",
+          "group": "navigation"
+        },
+        {
+          "command": "sharedo.removeFromDeploy",
+          "when": "view == SharedoServers && viewItem == DeployToServer",
+          "group": "navigation"
+        },
+        {
+          "command": "sharedo.addToDeploy",
+          "when": "view == SharedoServers && viewItem == Server",
+          "group": "navigation"
+        },
+        {
+          "command": "sharedo.addToCompare",
+          "when": "view == SharedoServers && viewItem =~ /Server/",
+          "group": "compare"
+        },
+        {
+          "command": "sharedo.removeFromCompare",
+          "when": "view == SharedoServers && viewItem =~ /Server/",
+          "group": "compare"
+        },
+        {
+          "command": "sharedo.showObject",
+          "when": "view == SharedoServers",
+          "group": "1"
+        },
+        {
+          "command": "sharedo.form.preview",
+          "when": "view == SharedoServers && viewItem == form",
+          "group": "form@1"
+        },
+        {
+          "command": "sharedo.form.viewJSON",
+          "when": "view == SharedoServers && viewItem == form",
+          "group": "form@2"
+        },
+        {
+          "command": "sharedo.form.validate",
+          "when": "view == SharedoServers && viewItem == form",
+          "group": "form@3"
+        },
+        {
+          "command": "sharedo.form.addField",
+          "when": "view == SharedoServers && viewItem == form",
+          "group": "form@4"
+        },
+        {
+          "command": "sharedo.form.clone",
+          "when": "view == SharedoServers && viewItem == form",
+          "group": "form@5"
+        },
+        {
+          "command": "sharedo.form.export",
+          "when": "view == SharedoServers && viewItem == form",
+          "group": "form@6"
+        },
+        {
+          "command": "sharedo.form.create",
+          "when": "view == SharedoServers && viewItem == forms",
+          "group": "form@1"
+        },
+        {
+          "command": "sharedo.form.import",
+          "when": "view == SharedoServers && viewItem == forms",
+          "group": "form@2"
+        },
+        {
+          "command": "sharedo.form.refresh",
+          "when": "view == SharedoServers && viewItem == forms",
+          "group": "navigation"
+        },
+        {
+          "command": "sharedo.grantCreatePermissionToDerivedWorkTypes",
+          "when": "view == SharedoServers && viewItem == workTypeCreatePermission",
+          "group": "3"
+        },
+        {
+          "command": "sharedo.removeCreatePermissionFromCurrentAndDerivedWorkTypes",
+          "when": "view == SharedoServers && viewItem == workTypeCreatePermission",
+          "group": "3"
+        },
+        {
+          "command": "sharedo.removeCreatePermissionCurrentWorkTypes",
+          "when": "view == SharedoServers && viewItem == workTypeCreatePermission",
+          "group": "2"
+        },
+        {
+          "command": "sharedo.addAsFavorite",
+          "when": "view == SharedoServers",
+          "group": "1"
+        },
+        {
+          "command": "sharedo.removeAsFavorite",
+          "when": "view == SharedoServers && viewItem =~ /FavoriteItem/",
+          "group": "1"
+        },
+        {
+          "command": "sharedo.openWorkTypeManagement",
+          "when": "view == SharedoServers && viewItem == WorkType",
+          "group": "1"
+        },
+        {
+          "command": "sharedo.hld.generate",
+          "when": "view == SharedoServers && viewItem == WorkType",
+          "group": "hld@1"
+        },
+        {
+          "command": "sharedo.hld.preview",
+          "when": "view == SharedoServers && viewItem == WorkType",
+          "group": "hld@2"
+        },
+        {
+          "command": "sharedo.hld.generateWithTemplate",
+          "when": "view == SharedoServers && viewItem == WorkType",
+          "group": "hld@3"
+        },
+        {
+          "command": "sharedo.hld.previewWithPlaywright",
+          "when": "view == SharedoServers && viewItem == WorkType",
+          "group": "hld@4"
+        },
+        {
+          "command": "sharedo.generateConfigurableHLD",
+          "when": "view == SharedoServers && viewItem == WorkType",
+          "group": "hld@4"
+        },
+        {
+          "command": "sharedo.generateFullDocumentationSuite",
+          "when": "view == SharedoServers && viewItem == WorkType",
+          "group": "hld@5"
+        },
+        {
+          "command": "sharedo.startWorkflow",
+          "when": "view == SharedoServers && viewItem == Workflow",
+          "group": "2"
+        },
+        {
+          "command": "sharedo.setWorkflowDataFields",
+          "when": "view == SharedoServers && viewItem == Workflow",
+          "group": "2"
+        },
+        {
+          "command": "sharedo.downloadWorkflow",
+          "when": "view == SharedoServers && viewItem == Workflow",
+          "group": "2"
+        },
+        {
+          "command": "sharedo.compairWorkflowToLocal",
+          "when": "view == SharedoServers && viewItem == Workflow",
+          "group": "2"
+        },
+        {
+          "command": "sharedo.workflow.download",
+          "when": "view == SharedoServers && viewItem == Workflow",
+          "group": "2"
+        },
+        {
+          "command": "sharedo.workflow.preview",
+          "when": "view == SharedoServers && viewItem == Workflow",
+          "group": "2"
+        },
+        {
+          "command": "sharedo.workflow.compareAcrossServers",
+          "when": "view == SharedoServers && viewItem == Workflow",
+          "group": "2"
+        },
+        {
+          "command": "sharedo.workflow.batchDownload",
+          "when": "view == SharedoServers && viewItem == WorkflowsFolder",
+          "group": "1"
+        },
+        {
+          "command": "sharedo.removeServer",
+          "when": "view == SharedoServers && viewItem == Server || viewItem == DeployToServer"
+        },
+        {
+          "command": "sharedo.download",
+          "when": "view == SharedoServers && viewItem == Js || viewItem == Html || viewItem == Json || viewItem == || viewItem == Css || viewItem == WidgetManifest || viewItem == WfActionManifest"
+        },
+        {
+          "command": "sharedo.downloadFolder",
+          "when": "view == SharedoServers && viewItem == Folder"
+        },
+        {
+          "command": "sharedo.compairToLocal",
+          "when": "view == SharedoServers && viewItem == Folder"
+        },
+        {
+          "command": "sharedo.findImplementations",
+          "when": "view == SharedoServers && viewItem == Folder"
+        },
+        {
+          "command": "sharedo.copyPermissionsFromTypeToDerivedTypes",
+          "when": "view == SharedoServers && viewItem == workTypeParticipantRole"
+        },
+        {
+          "command": "sharedo.findOptionSetOptionById",
+          "when": "view == SharedoServers && viewItem == optionSets"
+        },
+        {
+          "command": "sharedo.startManualExecution",
+          "when": "view == SharedoServers && viewItem == executionOverview",
+          "group": "execution@1"
+        },
+        {
+          "command": "sharedo.refreshExecutionMonitoring",
+          "when": "view == SharedoServers && viewItem == executionOverview",
+          "group": "execution@2"
+        },
+        {
+          "command": "sharedo.showAdvisorIssues",
+          "when": "view == SharedoServers && (viewItem == executionOverview || viewItem == advisorIssues)",
+          "group": "execution@3"
+        },
+        {
+          "command": "sharedo.exportExecutionStatistics",
+          "when": "view == SharedoServers && (viewItem == executionOverview || viewItem == executingPlans)",
+          "group": "execution@4"
+        },
+        {
+          "command": "sharedo.downloadAllExecutingWorkflows",
+          "when": "view == SharedoServers && (viewItem == executionOverview || viewItem == executingPlans)",
+          "group": "execution@5"
+        },
+        {
+          "command": "sharedo.showExecutionDetails",
+          "when": "view == SharedoServers && viewItem == executingPlan",
+          "group": "details@1"
+        },
+        {
+          "command": "sharedo.downloadWorkflowCode",
+          "when": "view == SharedoServers && viewItem == executingPlan",
+          "group": "details@2"
+        },
+        {
+          "command": "sharedo.showWorkflowCode",
+          "when": "view == SharedoServers && viewItem == executingPlan",
+          "group": "details@3"
+        },
+        {
+          "command": "sharedo.cancelExecution",
+          "when": "view == SharedoServers && viewItem == executingPlan",
+          "group": "details@4"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "ShareDo",
+      "properties": {
+        "sharedo.useNewTreeProvider": {
+          "type": "boolean",
+          "default": false,
+          "description": "Use the new refactored tree provider architecture for better performance and maintainability"
+        },
+        "sharedo.credentials.username": {
+          "type": "string",
+          "default": "",
+          "description": "Saved username for ShareDo authentication (saved after successful login)"
+        }
+      }
+    }
+  },
+  "directories": {
+    "src": "./src",
+    "test": "./src"
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "test:unit": "nyc --reporter=text mocha -r ts-node/register 'src/test/unit/**/*.test.ts'",
+    "test:integration": "nyc --reporter=text mocha -r ts-node/register src/test/integration/**/*.test.ts",
+    "test:coverage": "nyc mocha -r ts-node/register src/**/*.test.ts",
+    "coverage": "nyc report --reporter=html",
+    "coverage:check": "nyc check-coverage",
+    "testm": "mocha -r ts-node/register src/**/*.test.ts",
+    "package": "vsce package --pre-release",
+    "login": "vsce login ShareDo",
+    "publyish": "vsce publish minor"
+  },
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
+    "@jest/globals": "^30.0.5",
+    "@types/chai": "^5.2.2",
+    "@types/cli-color": "^2.0.3",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "16.x",
+    "@types/sinon": "^17.0.4",
+    "@types/sinon-chai": "^4.0.0",
+    "@types/vscode": "^1.76.0",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "@vscode/test-electron": "^2.2.3",
+    "adm-zip": "^0.5.16",
+    "chai": "^5.2.1",
+    "esbuild": "^0.25.8",
+    "eslint": "^8.34.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.8.2",
+    "nyc": "^17.1.0",
+    "sinon": "^21.0.0",
+    "sinon-chai": "^4.0.0",
+    "source-map-support": "^0.5.21",
+    "ts-node": "^10.9.2",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@types/adm-zip": "^0.5.7",
+    "@types/lodash": "^4.14.191",
+    "@types/uuid": "^9.0.1",
+        "axios": "^1.7.2",
+    "canvas": "^3.1.2",
+    "chalk": "^5.3.0",
+    "cli-color": "^2.0.3",
+    "docx": "^9.5.1",
+    "font-awesome": "^4.7.0",
+    "gridstack": "^10.3.1",
+    "guid-typescript": "^1.0.9",
+    "json5": "^2.2.3",
+    "lodash": "^4.17.21",
+    "node-fetch": "^3.3.1",
+    "ssl-root-cas": "^1.3.1",
+    "svg2img": "^1.0.0-beta.2",
+    "text-case": "^1.0.9",
+    "uuid": "^9.0.0",
+  
+
+    "dotenv": "^16.4.5",
+    "fs-extra": "^11.2.0",
+    "playwright": "^1.54.2",
+    "puppeteer": "^21.11.0"
+  }
+}

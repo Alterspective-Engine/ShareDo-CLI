@@ -1,0 +1,2098 @@
+﻿[
+    {
+        "File":  "API_Analysis_Report.md",
+        "Method":  "GET",
+        "Path":  "/api/path",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "API_Analysis_Report.md",
+        "Method":  "POST",
+        "Path":  "/api/path",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "API_Analysis_Report.md",
+        "Method":  "PUT",
+        "Path":  "/api/path",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "API_Analysis_Report.md",
+        "Method":  "DELETE",
+        "Path":  "/api/path",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "API_Analysis_Report.md",
+        "Method":  "PATCH",
+        "Path":  "/api/path",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Security.IdServer.Host__Custom__Modules__ChangePassword__ChangePasswordModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/password/changePassword",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Security.IdServer.Host__Custom__Modules__ChangePassword__ChangePasswordModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/password/changePassword/{token:guid}",
+        "Category":  "UI",
+        "Description":  "",
+        "Parameters":  [
+                           "token:guid"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Security.IdServer.Host__Custom__Modules__ChangePassword__ChangePasswordModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/password/changePassword/newuser/{token:guid}",
+        "Category":  "Security",
+        "Description":  "",
+        "Parameters":  [
+                           "token:guid"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Security.IdServer.Host__Custom__Modules__ChangePassword__ChangePasswordModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/password/changePassword",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Security.IdServer.Host__Custom__Modules__ChangePassword__ChangePasswordModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/password/changePassword/{token:guid}",
+        "Category":  "UI",
+        "Description":  "",
+        "Parameters":  [
+                           "token:guid"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Security.IdServer.Host__Custom__Modules__ChangePassword__ChangePasswordModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/password/changePassword/newuser/{token:guid}",
+        "Category":  "Security",
+        "Description":  "",
+        "Parameters":  [
+                           "token:guid"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Configuration__Settings__ConfigSettingsModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/admin/configurationSettings/apps",
+        "Category":  "Configuration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Configuration__Settings__ConfigSettingsModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/admin/configurationSettings/providers",
+        "Category":  "Configuration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Configuration__Settings__ConfigSettingsModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/admin/configurationSettings/providers/{systemName}",
+        "Category":  "Configuration",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__DataGraph__Modules__ScriptFunctionsModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/api/graph/scripting/functions/validate",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__DataGraph__Modules__ScriptFunctionsModule.cs.cs.md",
+        "Method":  "DELETE",
+        "Path":  "/api/graph/scripting/functions/cache",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__DataGraph__Modules__ScriptFunctionsModule.cs.cs.md",
+        "Method":  "DELETE",
+        "Path":  "/api/graph/scripting/functions/cache/local",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__LegalForms__Modules__LegalFormsModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/legalForms/providers",
+        "Category":  "LegalForms",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modeller__Approvals__ApprovalCommandsModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/approvals",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modeller__Approvals__ApprovalCommandsModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/approvals/{approvalSystemName}/steps",
+        "Category":  "Core",
+        "Description":  "",
+        "Parameters":  [
+                           "approvalSystemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modeller__Approvals__ApprovalCommandsModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/approvals/{approvalSystemName}/steps/order",
+        "Category":  "Core",
+        "Description":  "",
+        "Parameters":  [
+                           "approvalSystemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modeller__Approvals__ApprovalCommandsModule.cs.cs.md",
+        "Method":  "PUT",
+        "Path":  "/approvals/{systemName}",
+        "Category":  "Core",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modeller__Approvals__ApprovalCommandsModule.cs.cs.md",
+        "Method":  "PUT",
+        "Path":  "/approvals/{approvalSystemName}/steps/{stepSystemName}",
+        "Category":  "Core",
+        "Description":  "",
+        "Parameters":  [
+                           "approvalSystemName",
+                           "stepSystemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modeller__Approvals__ApprovalCommandsModule.cs.cs.md",
+        "Method":  "PUT",
+        "Path":  "/approvals/{systemName}/_enable",
+        "Category":  "Core",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modeller__Approvals__ApprovalCommandsModule.cs.cs.md",
+        "Method":  "PUT",
+        "Path":  "/approvals/{systemName}/_disable",
+        "Category":  "Core",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modeller__Approvals__ApprovalCommandsModule.cs.cs.md",
+        "Method":  "DELETE",
+        "Path":  "/approvals/{approvalSystemName}/steps/{stepSystemName}",
+        "Category":  "Core",
+        "Description":  "",
+        "Parameters":  [
+                           "approvalSystemName",
+                           "stepSystemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modeller__Portal__PublicApiPageContext.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/{publicApiName}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "publicApiName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modeller__ReferenceData__ParticipantReferenceDataModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/modeller/referenceData/participantTypes",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modeller__ReferenceData__ParticipantReferenceDataModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/modeller/referenceData/participantRoleCategories",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modeller__ReferenceData__ParticipantReferenceDataModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/modeller/referenceData/participantRoles",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modeller__ReferenceData__ParticipantReferenceDataModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/modeller/referenceData/participantTypes/for/{sharedoTypeSystemName}",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+                           "sharedoTypeSystemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modeller__ReferenceData__ParticipantReferenceDataModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/modeller/referenceData/participantRoles/for/{sharedoTypeSystemName}",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+                           "sharedoTypeSystemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modeller__ReferenceData__ScorecardTemplateModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/modeller/referenceData/scorecardtemplate",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__DictionaryRulesModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__DictionaryRulesModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/{systemName}",
+        "Category":  "Core",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__SecurityBarriersModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__SecurityBarriersModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/sharedoType/{sharedoTypeSystemName}/",
+        "Category":  "Core",
+        "Description":  "",
+        "Parameters":  [
+                           "sharedoTypeSystemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__SecurityBarriersModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/sharedoType/{sharedoTypeSystemName}/{isAllowed:bool}",
+        "Category":  "Core",
+        "Description":  "",
+        "Parameters":  [
+                           "sharedoTypeSystemName",
+                           "isAllowed:bool"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__SecurityBarriersModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/{sharedoId:guid}/",
+        "Category":  "UI",
+        "Description":  "",
+        "Parameters":  [
+                           "sharedoId:guid"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__SecurityBarriersModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/{sharedoId:guid}/{isAllowed:bool}",
+        "Category":  "UI",
+        "Description":  "",
+        "Parameters":  [
+                           "sharedoId:guid",
+                           "isAllowed:bool"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__SecurityBarriersModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/sharedoTypes",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__SecurityBarriersModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/{sharedoId:guid}/role/{roleSystemName}/participant/{participantId:guid}",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+                           "sharedoId:guid",
+                           "roleSystemName",
+                           "participantId:guid"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__SecurityBarriersModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/{sharedoId:guid}/role/{roleSystemName}/odsEntity/{odsId:guid}",
+        "Category":  "UI",
+        "Description":  "",
+        "Parameters":  [
+                           "sharedoId:guid",
+                           "roleSystemName",
+                           "odsId:guid"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__SecurityBarriersModule.cs.cs.md",
+        "Method":  "PUT",
+        "Path":  "/{sharedoId:guid}/role/{roleSystemName}/",
+        "Category":  "UI",
+        "Description":  "",
+        "Parameters":  [
+                           "sharedoId:guid",
+                           "roleSystemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__SecurityModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/types",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__SecurityModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/bySystemName/{systemName}",
+        "Category":  "Core",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__SecurityModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/resourcePermissions",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__SecurityModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/systemPermissions",
+        "Category":  "Core",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__SecurityModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/systemPermissions/odsEntity/{id:guid}/byCategory",
+        "Category":  "UI",
+        "Description":  "",
+        "Parameters":  [
+                           "id:guid"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__SecurityModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/systemPermissions/permissionSet/byCategory",
+        "Category":  "Core",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__SecurityModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/systemPermissions/permissionSets",
+        "Category":  "Core",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__SecurityModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/systemPermissions/permissionSet/{id:guid}/isActive/{isActive:bool}",
+        "Category":  "UI",
+        "Description":  "",
+        "Parameters":  [
+                           "id:guid",
+                           "isActive:bool"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__SecurityModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__SecurityModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/checkName",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__SecurityModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/systemPermissions/permissionSet/checkName",
+        "Category":  "Core",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__SecurityModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/systemPermissions/permissionSet/",
+        "Category":  "Core",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__SecurityModule.cs.cs.md",
+        "Method":  "PUT",
+        "Path":  "/systemPermissions/permissionSet/{permissionSetId:guid}/entity/{entityId:guid}",
+        "Category":  "UI",
+        "Description":  "",
+        "Parameters":  [
+                           "permissionSetId:guid",
+                           "entityId:guid"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__SecurityModule.cs.cs.md",
+        "Method":  "DELETE",
+        "Path":  "/systemPermissions/permissionSet/{id:guid}",
+        "Category":  "UI",
+        "Description":  "",
+        "Parameters":  [
+                           "id:guid"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__SecurityModule.cs.cs.md",
+        "Method":  "DELETE",
+        "Path":  "/systemPermissions/entity/{entityId:guid}/permissionSets",
+        "Category":  "UI",
+        "Description":  "",
+        "Parameters":  [
+                           "entityId:guid"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__Sharedo__SharedoPhaseAdminModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/admin/phases/{phaseSystemName}/transitions",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "phaseSystemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__Sharedo__SharedoPhaseAdminModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/api/admin/sharedo/phases/find",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Admin__Sharedo__SharedoPhaseAdminModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/api/admin/sharedoTypes/phases",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__BulkAssign__BulkAssignModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/api/bulkAssign/options",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__BulkAssign__BulkAssignModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/api/bulkAssign/related/{id}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "id"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__ConfigurationModule__ConfigurationModuleBase.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/custom",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__ConfigurationModule__Language__LanguageConfigurationModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "languages",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__ConfigurationModule__Language__LanguageConfigurationModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "languages",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__ConfigurationModule__SharedoType__SharedoTypeConfigurationModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "typeFeatures",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__ConfigurationModule__SharedoType__SharedoTypeConfigurationModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "typeFeatures",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Connections__ParticipantRoles__RoleConnectionsModellerModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/participantRoleConnections/{systemName}",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Connections__ParticipantRoles__RoleConnectionsModellerModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/participantRoleConnectionCategories",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Connections__ParticipantRoles__RoleConnectionsModellerModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/participantRoleConnectionCategory/{systemName}",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Connections__ParticipantRoles__RoleConnectionsModellerModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/participantRoleConnections/_find",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Connections__ParticipantRoles__RoleConnectionsModellerModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/participantRoleConnections/",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Connections__ParticipantRoles__RoleConnectionsModellerModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/participantRoleConnectionCategory",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Connections__ParticipantRoles__RoleConnectionsModellerModule.cs.cs.md",
+        "Method":  "PUT",
+        "Path":  "/participantRoleConnections/{systemName}",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Connections__ParticipantRoles__RoleConnectionsModellerModule.cs.cs.md",
+        "Method":  "PUT",
+        "Path":  "/participantRoleConnections/{systemName}/enabled",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Connections__ParticipantRoles__RoleConnectionsModellerModule.cs.cs.md",
+        "Method":  "DELETE",
+        "Path":  "/participantRoleConnectionCategory/{systemName}",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Connections__ParticipantRoles__RoleConnectionsModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/participants/{participantId}/connections/find",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+                           "participantId"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Connections__ParticipantRoles__RoleConnectionsModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/participants/{participantId}/connections",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+                           "participantId"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Connections__ParticipantRoles__RoleConnectionsModule.cs.cs.md",
+        "Method":  "DELETE",
+        "Path":  "/participants/{participantId}/connections/{connectionId:guid}",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+                           "participantId",
+                           "connectionId:guid"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Connections__Stats__ConnectionsStatsModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "api/ods/{odsId}/connections/stats/connection/{connectionSystemName}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "odsId",
+                           "connectionSystemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Connections__Stats__ConnectionsStatsModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "api/ods/{odsId}/connections/stats",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "odsId"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Connections__Stats__ConnectionsStatsModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "api/participants/{participantId}/connections/stats/ods/{connectionSystemName}",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+                           "participantId",
+                           "connectionSystemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Connections__Stats__ConnectionsStatsModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "api/ods/{odsId}/connections/stats/sharedo-breakdown",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "odsId"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Connections__Stats__ConnectionsStatsModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "api/participants/{participantId}/connections/stats/sharedo-breakdown",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+                           "participantId"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Connections__Stats__ConnectionsStatsModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "api/participants/{participantId}/connections/stats/summary",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+                           "participantId"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__CreditSafe__CreditSafeModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/api/creditsafe/authenticate",
+        "Category":  "Security",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__DocumentGeneration__Debug__DocGenDebugModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/debug/docgen/document/{fileId:guid}/view",
+        "Category":  "Documents",
+        "Description":  "",
+        "Parameters":  [
+                           "fileId:guid"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__DocumentGeneration__Debug__DocGenDebugModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/debug/docgen/document/test",
+        "Category":  "Documents",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__DocumentGeneration__Debug__DocGenDebugModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/debug/docgen/document/validate",
+        "Category":  "Documents",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__DocumentGeneration__Debug__DocGenDebugModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/debug/docgen/document/advisories",
+        "Category":  "Documents",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__DocumentGeneration__Debug__DocGenDebugModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/debug/docgen/document/inspect",
+        "Category":  "Documents",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__DocumentGeneration__Debug__DocGenDebugModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/debug/docgen/document/testHtmlEmail",
+        "Category":  "Documents",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__DocumentGeneration__Debug__DocGenDebugModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/debug/docgen/document/sendHtmlEmail",
+        "Category":  "Documents",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__DocumentGeneration__Debug__DocGenDebugModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/debug/docgen/document/testHtmlBlock",
+        "Category":  "Documents",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__DocumentGeneration__Debug__TagDebugModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/debug/docgen/sharedo/{sharedoId:guid}/tags",
+        "Category":  "UI",
+        "Description":  "",
+        "Parameters":  [
+                           "sharedoId:guid"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__DocumentGeneration__Debug__TagDebugModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/debug/docgen/loaders",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__DpaCheck__DpaCheckModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/dpaCheck/questionSets",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__DpaCheck__DpaCheckModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/dpaCheck/questionSets/{systemName}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__DpaCheck__DpaCheckModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/dpaCheck/questionSets/{systemName}/_exists",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__DpaCheck__DpaCheckModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/sharedo/{sharedoId:guid}/dpaCheck/{id:guid}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "sharedoId:guid",
+                           "id:guid"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__DpaCheck__DpaCheckModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/api/dpaCheck/questionSets/{systemName}/buildAnswersForContext/{contextId:guid}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName",
+                           "contextId:guid"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__DpaCheck__DpaCheckModule.cs.cs.md",
+        "Method":  "PUT",
+        "Path":  "/api/dpaCheck/questionSets/{systemName}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__DpaCheck__DpaCheckModule.cs.cs.md",
+        "Method":  "DELETE",
+        "Path":  "/api/dpaCheck/questionSets/{systemName}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Enrichments__EmailEnrichmentModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "enrichment/email/send/",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Enrichments__EmailEnrichmentModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "enrichment/email/",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Help__HelpModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Help__HelpModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/isEnabled",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__KeyDates__KeyDatesSummaryModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "keyDates/summary",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__ODS__OdsTypesModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/odsTypes/forQuickLinks",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__ODS__OrganisationModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/ods/organisations/",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__ODS__OrganisationModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/ods/organisations/{orgId}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "orgId"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__ODS__OrganisationModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/api/ods/organisations",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__ODS__OrganisationModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/api/ods/organisations/{orgId}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "orgId"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__ODS__OrganisationModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/api/ods/organisations/{orgId}/deactivate",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "orgId"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__PageView__PageViewModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/api/pageview/",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__PageView__PageViewModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/api/pageview/summary",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Participants__ParticipantTypesModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/participantTypes/",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Participants__ParticipantTypesModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/participantTypes/forOdsEntityType/{odsEntityType}",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+                           "odsEntityType"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__RelatedDocuments__RelatedMediaModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/download/relatedmedia/{id}",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+                           "id"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__RelatedDocuments__RelatedMediaModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/stream/relatedmedia/{id}",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+                           "id"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__RelatedSharedos__RelatedSharedosModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/relatedSharedos/{forId:guid}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "forId:guid"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__RelatedSharedos__RelatedSharedosModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/relatedSharedos/leftToRight/{forId:guid}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "forId:guid"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__RelatedSharedos__RelatedSharedosModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/relatedSharedos/rightToLeft/{forId:guid}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "forId:guid"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__RelatedSharedos__RelatedSharedosModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/relatedSharedos/{forId:guid}/allowedRelationships/{ofType}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "forId:guid",
+                           "ofType"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__RelatedSharedos__RelatedSharedosModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/relatedSharedos/{forId:guid}/allowedRelationships/{ofType}/typePaths",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "forId:guid",
+                           "ofType"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__RelatedSharedos__RelatedSharedosModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/relatedSharedos/infoFor/{forId:guid}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "forId:guid"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__RelatedSharedos__RelatedSharedosModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/relatedSharedos/allowedRelationships/{ofType}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "ofType"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__RelatedSharedos__RelatedSharedosModule.cs.cs.md",
+        "Method":  "DELETE",
+        "Path":  "/api/relatedSharedos/{forId:guid}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "forId:guid"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__SharedoTypes__SharedoTypesModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/sharedoTypes/tree/",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__SharedoTypes__SharedoTypesModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/sharedoTypes/{typeSystemName}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "typeSystemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__SharedoTypes__SharedoTypesModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/sharedoTypes/byTypePath/{typePath}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "typePath"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__SharedoTypes__SharedoTypesModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/sharedoTypes/{typeSystemName}/workScheduling",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "typeSystemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__SharedoTypes__SharedoTypesModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/sharedoTypes/{typeSystemName}/participantRoles/{roleSystemName}",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+                           "typeSystemName",
+                           "roleSystemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Sharedo__Reporting__DocumentAdminCharts__DocumentAdminChartsModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "templates/{templateSystemName}/auditevents",
+        "Category":  "Core",
+        "Description":  "",
+        "Parameters":  [
+                           "templateSystemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Sharedo__SharedoApiModuleBase.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/details",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Sharedo__TagsModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "api/sharedo/tags",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Tasks__TaskModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "tasks/{taskId:guid}",
+        "Category":  "Workflow",
+        "Description":  "",
+        "Parameters":  [
+                           "taskId:guid"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Tasks__TaskModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "tasks/",
+        "Category":  "Workflow",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Tasks__TaskModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "tasks/{taskId:guid}/patch",
+        "Category":  "Workflow",
+        "Description":  "",
+        "Parameters":  [
+                           "taskId:guid"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Tasks__TaskProcessTagModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/sharedo/{sharedoId:guid}/openChildren/{typeName}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "sharedoId:guid",
+                           "typeName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Tasks__TaskProcessTagModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/sharedo/{sharedoId:guid}/openChildren",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "sharedoId:guid"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Tasks__TaskProcessTagModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/sharedo/{sharedoId:guid}/{typeName}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "sharedoId:guid",
+                           "typeName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__Tasks__TaskProcessTagModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/sharedo/{sharedoId:guid}/childrenByTagPrefix/{tag}/{isOpen?true}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "sharedoId:guid",
+                           "tag",
+                           "isOpen?true"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Modules__TimePeriods__TimePeriodModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "save",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__RulesEngine__Modules__SelectorsModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/api/rulesEngine/_selectors/phase/",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__RulesEngine__Modules__SelectorsModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/api/rulesEngine/_selectors/phase/autocomplete",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__RulesEngine__Modules__SelectorsModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/api/rulesEngine/_selectors/teams/",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__Seq__LogTestModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__SmartVariables__SmartVariablesAdminModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/admin/smartVariables/",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__SmartVariables__SmartVariablesAdminModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/admin/smartVariables/definition/{systemName}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__SmartVariables__SmartVariablesAdminModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/admin/smartVariables/definition/{systemName}/isUnique",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__SmartVariables__SmartVariablesAdminModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/admin/smartVariables/values/{systemName}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__SmartVariables__SmartVariablesAdminModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/admin/smartVariables/form/{formId}/{systemName}/{context}",
+        "Category":  "LegalForms",
+        "Description":  "",
+        "Parameters":  [
+                           "formId",
+                           "systemName",
+                           "context"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__SmartVariables__SmartVariablesAdminModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/admin/smartVariables/{sharedoTypeSystemName}/forms/",
+        "Category":  "LegalForms",
+        "Description":  "",
+        "Parameters":  [
+                           "sharedoTypeSystemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__SmartVariables__SmartVariablesAdminModule.cs.cs.md",
+        "Method":  "PUT",
+        "Path":  "/api/admin/smartVariables/definition/{systemName}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__SmartVariables__SmartVariablesAdminModule.cs.cs.md",
+        "Method":  "PUT",
+        "Path":  "/api/admin/smartVariables/values/{systemName}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__SmartVariables__SmartVariablesAdminModule.cs.cs.md",
+        "Method":  "DELETE",
+        "Path":  "/api/admin/smartVariables/definition/{systemName}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__SmartVariables__SmartVariablesAdminModule.cs.cs.md",
+        "Method":  "DELETE",
+        "Path":  "/api/admin/smartVariables/values/{systemName}/{context}",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName",
+                           "context"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Case__WordAddin__WordAddinBlocksModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/wordaddin/contentBlockTypes",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.InfoTrack__Modules__PortalModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/sharedo/{sharedoId:guid}/infotrack/launchurl",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "sharedoId:guid"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.InfoTrack__Modules__PortalModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/infotrack/my/status",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.InfoTrack__Modules__PortalModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/infotrack/my/details",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.InfoTrack__Modules__PortalModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/api/infotrack/my/details",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Legal__API__Client__ClientModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/client/contract",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Legal__API__Enrichments__ParticipantEnrichmentModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/enrichment/participant/{participantId:guid}/",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+                           "participantId:guid"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Legal__API__Finance__Recoveries__RecoveriesModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/sharedo/{id}/finance/recoveries",
+        "Category":  "Finance",
+        "Description":  "",
+        "Parameters":  [
+                           "id"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Legal__API__Finance__Recoveries__RecoveriesModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/api/finance/recoveries/summary-detail",
+        "Category":  "Finance",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Legal__API__Finance__Recoveries__RecoveriesModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/api/sharedo/{id}/finance/recoveries",
+        "Category":  "Finance",
+        "Description":  "",
+        "Parameters":  [
+                           "id"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Legal__API__Finance__ValueProposition__ValuePropositionModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/sharedo/{id}/finance/valueProposition",
+        "Category":  "Finance",
+        "Description":  "",
+        "Parameters":  [
+                           "id"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Legal__API__Finance__ValueProposition__ValuePropositionModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/api/sharedo/{id}/finance/valueProposition",
+        "Category":  "Finance",
+        "Description":  "",
+        "Parameters":  [
+                           "id"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Legal__API__Incidents__DesciptionModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/incident/{id}/description",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "id"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Legal__API__Matters__DuplicateSearchModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/matter/duplicatesearch/referencedata",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Legal__API__Matters__DuplicateSearchModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/matter/duplicatesearch/client/{id}/divisions",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+                           "id"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Legal__API__Matters__DuplicateSearchModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/api/matter/duplicatesearch/search",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Legal__API__Matters__MattersPortfolioRadarModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/matters/radar",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Legal__API__Participants__InternalParticipantsModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/sharedo/{sharedoId}/participants/internal",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+                           "sharedoId"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Legal__API__Participants__InternalParticipantsModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/api/sharedo/{sharedoId}/participants/internal",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+                           "sharedoId"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Legal__API__Participants__ParticipantsPostModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/api/participant",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Legal__API__Participants__ParticipantsPostModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/api/participant/{id:guid}/reassign",
+        "Category":  "Participants",
+        "Description":  "",
+        "Parameters":  [
+                           "id:guid"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Legal__API__Sharedos__SharedoSearchModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/api/sharedo/search/referencedata",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Legal__API__Sharedos__SharedoSearchModule.cs.cs.md",
+        "Method":  "POST",
+        "Path":  "/api/sharedo/search",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Legal__API__ValuationGuidance__ValuationGuidanceModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/providers",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Legal__API__ValuationGuidance__ValuationGuidanceModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/{nodeId}/zoneSiblings",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+                           "nodeId"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Legal__API__ValuationGuidance__ValuationGuidanceModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/{nodeId}/children",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+                           "nodeId"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Legal__API__ValuationGuidance__ValuationGuidanceModule.cs.cs.md",
+        "Method":  "GET",
+        "Path":  "/providers",
+        "Category":  "Other",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Legal__Modules__MojClaims__TestRTAModule_cs.md",
+        "Method":  "GET",
+        "Path":  "/api/moj/test/rta/getClaimsList",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.Legal__Modules__MojClaims__TestRTAModule_cs.md",
+        "Method":  "POST",
+        "Path":  "/api/moj/test/rta/addAttachmentNote",
+        "Category":  "Integration",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.PowerBIEmbedded__Modules__ReportModule_cs.md",
+        "Method":  "GET",
+        "Path":  "/reports/status",
+        "Category":  "Reports",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.PowerBIEmbedded__Modules__ReportModule_cs.md",
+        "Method":  "GET",
+        "Path":  "/reports/{id}/embed",
+        "Category":  "Reports",
+        "Description":  "",
+        "Parameters":  [
+                           "id"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.PowerBIEmbedded__Modules__ReportModule_cs.md",
+        "Method":  "GET",
+        "Path":  "/reports/getGroups/{connectionName}",
+        "Category":  "Reports",
+        "Description":  "",
+        "Parameters":  [
+                           "connectionName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.PowerBIEmbedded__Modules__ReportModule_cs.md",
+        "Method":  "GET",
+        "Path":  "/reports/getReportsInGroup/{connectionName}",
+        "Category":  "Reports",
+        "Description":  "",
+        "Parameters":  [
+                           "connectionName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.PowerBIEmbedded__Modules__ReportModule_cs.md",
+        "Method":  "GET",
+        "Path":  "/reports/getReportConfig/{systemName}",
+        "Category":  "Configuration",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.PowerBIEmbedded__Modules__ReportModule_cs.md",
+        "Method":  "GET",
+        "Path":  "/reports/getRefreshHistory/{systemName}",
+        "Category":  "Reports",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.PowerBIEmbedded__Modules__ReportModule_cs.md",
+        "Method":  "GET",
+        "Path":  "/reports/getLastRefreshHistory/{systemName}",
+        "Category":  "Reports",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.PowerBIEmbedded__Modules__ReportModule_cs.md",
+        "Method":  "POST",
+        "Path":  "/reports/{systemName}",
+        "Category":  "Reports",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Core.PowerBIEmbedded__Modules__ReportModule_cs.md",
+        "Method":  "POST",
+        "Path":  "/reports/{systemName}/refresh",
+        "Category":  "Reports",
+        "Description":  "",
+        "Parameters":  [
+                           "systemName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Guidance__Modules__SampleMySiteData__SampleDataModule_cs.md",
+        "Method":  "GET",
+        "Path":  "api/developer/guidance/samplemysitedata/tasks",
+        "Category":  "Workflow",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Guidance__Modules__SampleMySiteData__SampleDataModule_cs.md",
+        "Method":  "GET",
+        "Path":  "api/developer/guidance/samplemysitedata/tasks/{filterName}",
+        "Category":  "Workflow",
+        "Description":  "",
+        "Parameters":  [
+                           "filterName"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Guidance__Modules__SampleMySiteData__SampleDataModule_cs.md",
+        "Method":  "GET",
+        "Path":  "api/developer/guidance/samplemysitedata/tasks/counts",
+        "Category":  "Workflow",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Guidance__Modules__SampleMySiteData__SampleDataModule_cs.md",
+        "Method":  "GET",
+        "Path":  "api/developer/guidance/samplemysitedata/tasks/radar",
+        "Category":  "Workflow",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Guidance__Modules__SampleMySiteData__SampleDataModule_cs.md",
+        "Method":  "POST",
+        "Path":  "api/developer/guidance/samplemysitedata/tasks",
+        "Category":  "Workflow",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Guidance__Modules__SampleMySiteData__SampleDataModule_cs.md",
+        "Method":  "POST",
+        "Path":  "api/developer/guidance/samplemysitedata/tasks/randomTasks/{count}",
+        "Category":  "Workflow",
+        "Description":  "",
+        "Parameters":  [
+                           "count"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Guidance__Modules__SampleMySiteData__SampleDataModule_cs.md",
+        "Method":  "DELETE",
+        "Path":  "api/developer/guidance/samplemysitedata/tasks",
+        "Category":  "Workflow",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Guidance__Modules__SampleMySiteData__SampleDataModule_cs.md",
+        "Method":  "DELETE",
+        "Path":  "api/developer/guidance/samplemysitedata/tasks/{id}",
+        "Category":  "Workflow",
+        "Description":  "",
+        "Parameters":  [
+                           "id"
+                       ]
+    },
+    {
+        "File":  "Sharedo.Web.UI__Plugins__Sharedo.Guidance__Modules__SampleMySiteData__SampleDataModule_cs.md",
+        "Method":  "DELETE",
+        "Path":  "api/developer/guidance/samplemysitedata/tasks/bulk",
+        "Category":  "Workflow",
+        "Description":  "",
+        "Parameters":  [
+
+                       ]
+    }
+]

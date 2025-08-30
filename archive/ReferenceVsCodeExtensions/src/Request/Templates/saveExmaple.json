@@ -1,0 +1,75 @@
+{
+    "id": "52f7449e-e22d-4e91-a7cc-afe70011e2d8",
+    "systemName": "cre-mat-lease-click-and-collect-car-park-licence-march-2022-513600721-1",
+    "templateType": "document-issued",
+    "active": true,
+    "isPinned": false,
+    "title": "Click and Collect Car Park Licence - precedent March 2021(513600721.1)",
+    "description": "Click and Collect Car Park Licence - precedent March 2021(513600721.1)",
+    "tags": [],
+    "processTags": [],
+    "toRoleRequired": false,
+    "regardingRoleRequired": false,
+    "toRoles": [],
+    "regardingRoles": [],
+    "recipientLocationRequired": false,
+    "recipientConfig": {
+        "recipientLocationRequired": false
+    },
+    "contextTypeSystemName": "matter-real-estate-au",
+    "formIds": [],
+    "approval": {
+        "approvalSystemName": null,
+        "competencyApprovalSystemName": null,
+        "competencySystemNames": []
+    },
+    "deliveryChannels": [],
+    "refreshOnDelivery": false,
+    "deliveryRefreshTags": [],
+    "defaultFolderId": 5006000,
+    "outputDestinations": [
+        {
+            "typeSystemName": "matter-real-estate-au",
+            "repository": "matter-documents-gsd",
+            "path": "[document.output.selectedFolder]"
+        }
+    ],
+    "pdfOptions": {
+        "generate": false,
+        "deleteOriginal": false,
+        "fileName": "[_titleAsFilename].pdf"
+    },
+    "packDocuments": [
+        {
+            "id": "4f980e6a-b7d2-4dd6-8506-afe70011e2dd",
+            "type": "document",
+            "outputTitle": "Click and Collect Car Park Licence - precedent March 2021(513600721.1)",
+            "outputFileName": "[_titleAsFilename].docx",
+            "copies": 1,
+            "isMandatory": true,
+            "order": 1,
+            "sources": [
+                {
+                    "id": "75889469-f93f-4b1b-86de-afe70011e2dd",
+                    "htmlContent": null,
+                    "filePath": "CRE/Documents/Coles/Click and Collect Car Park Licence - Precedent 25 March 2022.DOCX",
+                    "order": 1,
+                    "status": null,
+                    "rules": []
+                }
+            ]
+        }
+    ],
+    "emailSubject": null,
+    "templateRepository": "templates",
+    "displayInMenus": true,
+    "displayContexts": [],
+    "displayRules": [],
+    "legacyPhaseRestrictions": [],
+    "contentBlock": {
+        "availableForTemplateAuthors": true,
+        "availableForDocumentAuthors": true
+    },
+    "participantSearchScopeSystemName": null,
+    "multiPartyTemplateSources": []
+}

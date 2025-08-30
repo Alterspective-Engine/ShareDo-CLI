@@ -1,0 +1,916 @@
+﻿openapi: 3.0.3
+info:
+  title: Sharedo Participants API
+  description: |
+    API specification for Sharedo Participants functionality.
+    Generated from Nancy module analysis of Sharedo platform v7.8.2.
+    
+    This API provides endpoints for managing participants operations within the Sharedo platform.
+  version: 7.8.2
+  contact:
+    name: Sharedo Support
+    url: https://www.sharedo.com
+
+servers:
+  - url: https://api.sharedo.com
+    description: Production server
+  - url: https://staging-api.sharedo.com
+    description: Staging server
+  - url: http://localhost:8080
+    description: Local development server
+
+security:
+  - SharedoAuth: []
+
+paths:
+  /{sharedoId:guid}/role/{roleSystemName}/participant/{participantId:guid}:
+    get:
+      tags:
+        - Participants
+      summary: GET {participantId:guid}
+      operationId: getRoleParticipant
+      parameters:
+        - name: sharedoId:guid
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: sharedoId:guid parameter
+        - name: roleSystemName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: roleSystemName parameter
+        - name: participantId:guid
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: participantId:guid parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/modeller/referenceData/participantRoleCategories:
+    get:
+      tags:
+        - Participants
+      summary: GET participantRoleCategories
+      operationId: getReferencedataParticipantrolecategories
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/modeller/referenceData/participantRoles:
+    get:
+      tags:
+        - Participants
+      summary: GET participantRoles
+      operationId: getReferencedataParticipantroles
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/modeller/referenceData/participantRoles/for/{sharedoTypeSystemName}:
+    get:
+      tags:
+        - Participants
+      summary: GET {sharedoTypeSystemName}
+      operationId: getParticipantrolesFor
+      parameters:
+        - name: sharedoTypeSystemName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: sharedoTypeSystemName parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/modeller/referenceData/participantTypes:
+    get:
+      tags:
+        - Participants
+      summary: GET participantTypes
+      operationId: getReferencedataParticipanttypes
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/modeller/referenceData/participantTypes/for/{sharedoTypeSystemName}:
+    get:
+      tags:
+        - Participants
+      summary: GET {sharedoTypeSystemName}
+      operationId: getParticipanttypesFor
+      parameters:
+        - name: sharedoTypeSystemName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: sharedoTypeSystemName parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/participant:
+    post:
+      tags:
+        - Participants
+      summary: POST participant
+      operationId: postApiParticipant
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/participant/{id:guid}/reassign:
+    post:
+      tags:
+        - Participants
+      summary: POST reassign
+      operationId: postParticipantReassign
+      parameters:
+        - name: id:guid
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: id:guid parameter
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/participantTypes/:
+    get:
+      tags:
+        - Participants
+      summary: GET 
+      operationId: getApiParticipanttypes
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/participantTypes/forOdsEntityType/{odsEntityType}:
+    get:
+      tags:
+        - Participants
+      summary: GET {odsEntityType}
+      operationId: getParticipanttypesForodsentitytype
+      parameters:
+        - name: odsEntityType
+          in: path
+          required: true
+          schema:
+            type: string
+          description: odsEntityType parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/sharedo/{sharedoId}/participants/internal:
+    get:
+      tags:
+        - Participants
+      summary: GET internal
+      operationId: getParticipantsInternal
+      parameters:
+        - name: sharedoId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: sharedoId parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    post:
+      tags:
+        - Participants
+      summary: POST internal
+      operationId: postParticipantsInternal
+      parameters:
+        - name: sharedoId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: sharedoId parameter
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /api/sharedoTypes/{typeSystemName}/participantRoles/{roleSystemName}:
+    get:
+      tags:
+        - Participants
+      summary: GET {roleSystemName}
+      operationId: getSharedotypesParticipantroles
+      parameters:
+        - name: typeSystemName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: typeSystemName parameter
+        - name: roleSystemName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: roleSystemName parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /enrichment/participant/{participantId:guid}/:
+    get:
+      tags:
+        - Participants
+      summary: GET 
+      operationId: getEnrichmentParticipant
+      parameters:
+        - name: participantId:guid
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: participantId:guid parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /participantRoleConnectionCategories:
+    get:
+      tags:
+        - Participants
+      summary: GET participantRoleConnectionCategories
+      operationId: getES
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /participantRoleConnectionCategory:
+    post:
+      tags:
+        - Participants
+      summary: POST participantRoleConnectionCategory
+      operationId: postRY
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /participantRoleConnectionCategory/{systemName}:
+    delete:
+      tags:
+        - Participants
+      summary: DELETE {systemName}
+      operationId: deleteRY
+      parameters:
+        - name: systemName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: systemName parameter
+      responses:
+        '204':
+          description: Resource deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+    get:
+      tags:
+        - Participants
+      summary: GET {systemName}
+      operationId: getRY
+      parameters:
+        - name: systemName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: systemName parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /participantRoleConnections/:
+    post:
+      tags:
+        - Participants
+      summary: POST 
+      operationId: postNS
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /participantRoleConnections/_find:
+    post:
+      tags:
+        - Participants
+      summary: POST _find
+      operationId: postParticipantroleconnections_Find
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /participantRoleConnections/{systemName}:
+    get:
+      tags:
+        - Participants
+      summary: GET {systemName}
+      operationId: getNS
+      parameters:
+        - name: systemName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: systemName parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    put:
+      tags:
+        - Participants
+      summary: PUT {systemName}
+      operationId: putNS
+      parameters:
+        - name: systemName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: systemName parameter
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for PUT operation
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /participantRoleConnections/{systemName}/enabled:
+    put:
+      tags:
+        - Participants
+      summary: PUT enabled
+      operationId: putParticipantroleconnectionsEnabled
+      parameters:
+        - name: systemName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: systemName parameter
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for PUT operation
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /participants/{participantId}/connections:
+    post:
+      tags:
+        - Participants
+      summary: POST connections
+      operationId: postParticipantsConnections
+      parameters:
+        - name: participantId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: participantId parameter
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /participants/{participantId}/connections/{connectionId:guid}:
+    delete:
+      tags:
+        - Participants
+      summary: DELETE {connectionId:guid}
+      operationId: deleteParticipantsConnections
+      parameters:
+        - name: participantId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: participantId parameter
+        - name: connectionId:guid
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: connectionId:guid parameter
+      responses:
+        '204':
+          description: Resource deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /participants/{participantId}/connections/find:
+    post:
+      tags:
+        - Participants
+      summary: POST find
+      operationId: postConnectionsFind
+      parameters:
+        - name: participantId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: participantId parameter
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  api/participants/{participantId}/connections/stats/ods/{connectionSystemName}:
+    get:
+      tags:
+        - Participants
+      summary: GET {connectionSystemName}
+      operationId: getStatsOds
+      parameters:
+        - name: participantId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: participantId parameter
+        - name: connectionSystemName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: connectionSystemName parameter
+      responses:
+        '200':
+          description: Operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  api/participants/{participantId}/connections/stats/sharedo-breakdown:
+    post:
+      tags:
+        - Participants
+      summary: POST sharedo-breakdown
+      operationId: postStatsSharedo-Breakdown
+      parameters:
+        - name: participantId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: participantId parameter
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  api/participants/{participantId}/connections/stats/summary:
+    post:
+      tags:
+        - Participants
+      summary: POST summary
+      operationId: postStatsSummary
+      parameters:
+        - name: participantId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: participantId parameter
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Request data for POST operation
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+
+components:
+  securitySchemes:
+    SharedoAuth:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://auth.sharedo.com/oauth/authorize
+          tokenUrl: https://auth.sharedo.com/oauth/token
+          scopes:
+            read: Read access to resources
+            write: Write access to resources
+            admin: Administrative access
+
+  responses:
+    BadRequest:
+      description: Invalid request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    Unauthorized:
+      description: Authentication required
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    Forbidden:
+      description: Insufficient permissions
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+
+  schemas:
+    Error:
+      type: object
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
+        details:
+          type: string
+      required:
+        - code
+        - message
